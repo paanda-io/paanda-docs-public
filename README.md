@@ -28,9 +28,9 @@
 - [ERP WSTĘP](/erp-api)  
 - [REST API Dokument przyjęcie PZ,PZI..](/erp-api/document/documentin.md) 
 - [REST API Dokument Wydania RW,RWP](/erp-api/document/documentout.md))
-- [REST API ZAMÓWIENIE](/erp-api/order)
+- [REST API Faktura zakupu, Faktura VAT](/erp-api/document/invoice.md))
+- [REST API ZAMÓWIENIE](/erp-api/document/order.md)
 - Zlecenie Produkcyjne
-- Faktura VAT
 - [REST API ERP HELPERS QRCODE, BARCODE, VAT , GEOLOCATION](/erp-api/helpers)  
 
 ## Developer
