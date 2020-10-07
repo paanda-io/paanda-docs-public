@@ -7,14 +7,19 @@
 - [erp].[agreement_get] pobranie umowy
 - [erp].[agreement_list]  lista umow
 
-## 2 UI - User interface
+## 2 Settings/Variables
+
+- instance.sales.seller domyslny nabywca `select value from configuration.configuration where configurationID ='instance.sales.seller`
+
+## 3 UI - User interface
 
 v_agreement komponent
 https://app.paanda.io/pages/erp/agreement - interface
 
-## 3 API - REST API
 
-### 3.1 Pobranie  umowy
+## 10 API - REST API
+
+### 10.1 Pobranie  umowy
 
 ***Request***
 
