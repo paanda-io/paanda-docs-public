@@ -9,9 +9,11 @@ https://app.paanda.io/pages/erp/agreement - interface
 
 ***Request***
 
+```http
 GET {host}/api/erp/agreement/get/{app_name}/{agreementid}
+```
+
 
 ***Response***
 
-data.document - nagłówek ( SQL PROCEDURE erp.agreement_get)
-data.documentline - pozycje ( SQL PROCEDURE erp.documentline_list)
+data.agreement - nagłówek ( SQL PROCEDURE erp.agreement_get)
