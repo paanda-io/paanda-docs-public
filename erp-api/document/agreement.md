@@ -1,18 +1,20 @@
 # Umowy
 
-## DB Objects
+## DB - Objects
 
 - [document].[Agreement] - tabela z umowami
 - [erp].[agreement_InsertUpdate] - dodawanie umowy
 - [erp].[agreement_get] pobranie umowy
 - [erp].[agreement_list]  lista umow
 
-## User interface
+## UI - User interface
 
 v_agreement komponent
 https://app.paanda.io/pages/erp/agreement - interface
 
-## 1 Pobranie  umowy
+## API - REST API
+
+### 1 Pobranie  umowy
 
 ***Request***
 
@@ -25,7 +27,6 @@ Request example
 ```http
 https://app.paanda.io/api/erp/agreement/get/platformaerp/62443958-11c5-4cda-8d78-d2eab43d9fd0
 ```
-
 
 ***Response***
 
