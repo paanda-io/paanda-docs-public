@@ -13,6 +13,12 @@ https://app.paanda.io/pages/erp/agreement - interface
 GET {host}/api/erp/agreement/get/{app_name}/{agreementid}
 ```
 
+Request example 
+
+```http
+https://app.paanda.io/api/erp/agreement/get/platformaerp/62443958-11c5-4cda-8d78-d2eab43d9fd0
+```
+
 
 ***Response***
 
