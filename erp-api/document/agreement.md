@@ -1,5 +1,12 @@
 # Umowy
 
+## DB Objects
+
+- [document].[Agreement] - tabela z umowami
+- [erp].[agreement_InsertUpdate] - dodawanie umowy
+- [erp].[agreement_get] pobranie umowy
+- [erp].[agreement_list]  lista umow
+
 ## User interface
 
 v_agreement komponent
