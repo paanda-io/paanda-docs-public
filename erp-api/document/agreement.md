@@ -3,7 +3,7 @@
 ## 1 DB - Objects
 
 - [document].[Agreement] - tabela z umowami
-- [erp].[agreement_InsertUpdate] - dodawanie umowy
+- [erp].[agreement_InsertUpdate] - zapisanie  umowy
 - [erp].[agreement_get] pobranie umowy
 - [erp].[agreement_list]  lista umow
 
@@ -35,4 +35,25 @@ https://app.paanda.io/api/erp/agreement/get/platformaerp/62443958-11c5-4cda-8d78
 
 ***Response***
 
-data.agreement - nagłówek ( SQL PROCEDURE erp.agreement_get)
+data.agreement - nagłówek (db: erp.agreement_get)
+
+
+
+### 10.2 Zapisanie umowy 
+
+***Request***
+
+```http
+GET {host}/api/erp/agreement/set/{app_name}/{agreementid}
+```
+
+Request example 
+
+```http
+https://app.paanda.io/api/erp/agreement/set/platformaerp/62443958-11c5-4cda-8d78-d2eab43d9fd0
+```
+
+***Response***
+
+STATUS 200 
+
