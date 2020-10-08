@@ -56,11 +56,10 @@ https://app.paanda.io/api/erp/agreement/get/platformaerp/62443958-11c5-4cda-8d78
 
 ***Response***
 
-data.agreement - nagłówek (db: erp.agreement_get)
-data.signature - lista podpisów wraz z statusem 
-data.bankaccount - lisa kont bankowych zamawiającego
-
-
+- data 
+  - agreement - nagłówek (db: erp.agreement_get)
+  - signature - lista podpisów wraz z statusem 
+  - bankaccount - lisa kont bankowych zamawiającego
 
 ### 10.2 Zapisanie umowy 
 
