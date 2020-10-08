@@ -1,8 +1,29 @@
+---
+status: ALPHA
+language: PL
+title: "API Umowy"
+required-app: paanda, platformaERP
+---
+
 # Umowy
 
 ## 1 DB - Objects
 
-- [document].[Agreement] - tabela z umowami
+- [document].[agreement] - umowy, umowy ramowe, specyfikacje do zamówień
+- [document].[signature] - podpisy elektroniczne do dokumentów
+  - signature_id
+  - signature_email
+  - signature_phone_number
+  - signature_first_name
+  - signature_last_name
+  - signature_company_name
+  - signature_company_vat
+  - signature_remote_id
+  - signature_remote_source
+  - signature_sign_date
+  - signature_ip
+  - signature_hash - document_hash
+- [common].[bankAccount] - konta bankowe zamawiającego
 - [erp].[agreement_InsertUpdate] - zapisanie  umowy
 - [erp].[agreement_get] pobranie umowy
 - [erp].[agreement_list]  lista umow
@@ -13,8 +34,8 @@
 
 ## 3 UI - User interface
 
-v_agreement komponent
-https://app.paanda.io/pages/erp/agreement - interface
+- platformaerp :: /pages/erp/v_agreement - komponent
+- https://app.paanda.io/pages/erp/agreement - interface
 
 
 ## 10 API - REST API
@@ -36,6 +57,8 @@ https://app.paanda.io/api/erp/agreement/get/platformaerp/62443958-11c5-4cda-8d78
 ***Response***
 
 data.agreement - nagłówek (db: erp.agreement_get)
+data.signature - lista podpisów wraz z statusem 
+data.bankaccount - lisa kont bankowych zamawiającego
 
 
 
