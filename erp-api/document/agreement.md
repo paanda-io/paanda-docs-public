@@ -53,7 +53,7 @@ GET {host}/api/erp/agreement/get/{app_name}/{agreementid}
 ***Response structure***
 
 - data 
-  - agreement - nagłówek (db: erp.agreement_get)
+  - agreement - nagłówek
   - signature_list - lista podpisów wraz z statusem 
   - bankaccount_list - lisa kont bankowych zamawiającego
 
