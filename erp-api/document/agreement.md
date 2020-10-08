@@ -25,6 +25,7 @@ required-app: paanda, platformaERP
   - signature_hash - document_hash
 - [common].[bankAccount] - konta bankowe zamawiającego
 - [erp].[bankAccount_List] - pobranie listy kont
+- [erp].[signature_List] - pobranie listy podpisów elektronicznych
 - [erp].[agreement_InsertUpdate] - zapisanie  umowy
 - [erp].[agreement_get] pobranie umowy
 - [erp].[agreement_list]  lista umow
