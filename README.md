@@ -30,16 +30,12 @@
 - [REST API Dokument Wydania RW,RWP](/erp-api/document/documentout.md))
 - [REST API Faktura zakupu, Faktura VAT](/erp-api/document/invoice.md))
 - [REST API ZAMÓWIENIE](/erp-api/document/order.md)
+- [REST API ZAMÓWIENIE](/erp-api/document/agreement.md)
 - Zlecenie Produkcyjne
+- Zlecenie Serwisowe
 - [REST API ERP HELPERS QRCODE, BARCODE, VAT , GEOLOCATION](/erp-api/helpers)  
 
-## Developer
 
-- [Developer Introduction](/developer) 
-
-
-### CLIENT
-[POST GET EXAMPLES](/developer/client/generic_post_get.md)
 
 
 ## Versions
