@@ -2,6 +2,7 @@
 status: ALPHA
 language: PL
 title: "API Faktura Zakupu / Sprzedaży"
+required-paanda-app: platformaERP
 ---
 
 
