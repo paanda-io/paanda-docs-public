@@ -53,8 +53,8 @@ GET {host}/api/erp/agreement/get/{app_name}/{agreementid}
 
 - data 
   - agreement - nagłówek (db: erp.agreement_get)
-  - signatures - lista podpisów wraz z statusem 
-  - bankaccounts - lisa kont bankowych zamawiającego
+  - signature_list - lista podpisów wraz z statusem 
+  - bankaccount_list - lisa kont bankowych zamawiającego
 
 ### 10.2 Zapisanie umowy 
 
