@@ -1,4 +1,4 @@
-# Index
+# Paanda - public documentation
 
 ## Basics (EN)
 
