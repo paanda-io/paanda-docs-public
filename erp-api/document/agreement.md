@@ -24,6 +24,7 @@ required-app: paanda, platformaERP
   - signature_ip
   - signature_hash - document_hash
 - [common].[bankAccount] - konta bankowe zamawiającego
+- [erp].[bankAccount_List] - pobranie listy kont
 - [erp].[agreement_InsertUpdate] - zapisanie  umowy
 - [erp].[agreement_get] pobranie umowy
 - [erp].[agreement_list]  lista umow
@@ -52,8 +53,8 @@ GET {host}/api/erp/agreement/get/{app_name}/{agreementid}
 
 - data 
   - agreement - nagłówek (db: erp.agreement_get)
-  - signature - lista podpisów wraz z statusem 
-  - bankaccount - lisa kont bankowych zamawiającego
+  - signatures - lista podpisów wraz z statusem 
+  - bankaccounts - lisa kont bankowych zamawiającego
 
 ### 10.2 Zapisanie umowy 
 
