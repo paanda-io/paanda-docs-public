@@ -1,29 +1,38 @@
 # Paanda - public documentation
 
-## Basics (EN)
+## Basics
 
 - [REST API introduction](/core-api)  
 - [REST API Authentication](/core-api/01-authentication.md)  
 - [Builtin Roles](/core-api/02-roles.md) 
 
-## Paanda Core Modules (EN)
+## Engine
 
-- USER MANAGMENT LAYER
-  - ACCOUNTS
-  - TEAMS
-  - ROLES
-- APP (SPACE) LAYER
-  - STORAGE
-- DATA ACCESS LAYER (SRS)
+Paanda is built on three layer concept, every operation is available as rest API
+
+
+- **DATA ACCESS ** 
+  
+  SRS file format , Extract Transform Load data.
+  
   - [FORMAT SPECIFICATION](/srs-api)  
-  - [REST API SRS](/srs-api/12-rest-examples.md)
-- SIMPLE FILE STORAGE
-  - FILES
-- RAPID UI LAYER
-  - DEVELOPMENT
+  
+- **CORE**
+  
+  - [SRS file format processor](/srs-api/12-rest-examples.md) 
+  - USER MANAGMENT LAYER
+    - ACCOUNTS
+    - TEAMS
+    - ROLES
+  - STORAGE 
+  
+- **UI **
 
+  Supports: Live preview, custom UI for every app
 
-## ERP API (PL)
+## CUSTOM EXTENSIONS
+
+### ERP API (PL)
 
 - [ERP WSTĘP](/erp-api)  
 - [REST API Dokument przyjęcie PZ,PZI..](/erp-api/document/documentin.md) 
@@ -34,9 +43,6 @@
 - Zlecenie Produkcyjne
 - Zlecenie Serwisowe
 - [REST API ERP HELPERS QRCODE, BARCODE, VAT , GEOLOCATION](/erp-api/helpers)  
-
-
-
 
 ## Versions
 

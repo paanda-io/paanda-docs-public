@@ -4,26 +4,10 @@
 
 SRS is an core Paanda module  which extract transform and load data from various data sources.
 
-
 - SRS definition is a xml file, stored in local filesystem or git repository,  format comes with sensible defaults to get up and running quickly and once you move towards a more advanced setup can be done.
-
 - SRS can be executed using REST API or  Paanda UI,   and produce output for example JSON/HTML/PDF/Excel 
 
 ## "Hello world" example
-
-``` xml
-<SRS>  
-  <commands>
-   <command name="hello">
-      <![CDATA[
-      select 'Hello World'
-      ]]>
-   </command>
-  </commands>
-</SRS>
-```
-
-## Basic configuration options
 
 ``` xml
 <SRS>
@@ -31,7 +15,13 @@ SRS is an core Paanda module  which extract transform and load data from various
     <description>Markdown Support</description>
     <permission>VIP</permission>
     <cache><!--cache in seconds--></cache>
-    
+    <commands>
+   <command name="hello">
+      <![CDATA[
+      select 'Hello World'
+      ]]>
+   </command>
+  </commands>  
     <connections><!--see SRS/connections documentation on sidebar--></connections>
     <parameters><!--see SRS/parameters documentation on sidebar--></parameters>
     <commands><!--see SRS/commands documentation on sidebar--></commands>
@@ -41,3 +31,15 @@ SRS is an core Paanda module  which extract transform and load data from various
 </SRS>
 
 ```
+
+Read more ...
+
+- [Connections](/02-connections.md)  
+- [Parameters](/03-Parameters.md)  
+- [Commands](/04-commands.md)  
+- [Columns](/05-columns.md)  
+- [Options](/06-options.md)  
+- [Targets](/08-targets.md)
+- [Permissions](/09-permissions.md)
+- [Renderer](/11-renderer.md)
+- [Rest Examples](/12-rest-examples.md)
