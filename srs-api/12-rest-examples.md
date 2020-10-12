@@ -1,72 +1,48 @@
-# REST SRS Examples
+# SRS File Format processor
 
-## General Scheme
+SRS file format processor transform Paanda file definition to operations. 
 
+## Quickstart REST API
+
+```http
+GET {host}/api/srs/{app_name}/{srs_name}/{renderer}?ptype={ptype}&ptoken={bearertoken}
+Authorization: Bearer {{token}}
+```
+
+```http
+POST {host}/api/srs/{app_name}/{srs_name}/{renderer}?{querystring}&ptoken={bearertoken}
+Authorization: Bearer {{token}}
+{
+    "param1": "value1",
+    "param2": "value2"
+}
+```
+
+- `ptype` optional token reaplacing header token
+- `ptype` optional type of expeceted response (default JSON) 
 - `app_name` application context **REQUIRED**
-- `srs_name` SRS definition name **REQUIRED**
+- `srs_name` SRS definition name **REQUIRED** 
 - `renderer` renderer **OPTIONAL**
-- `querystring` **OPTIONAL** param1=value&param2=value2
+- `querystring` **OPTIONAL** all query strings value are passed to engine
+- **renderer** if  contains ANY string SRS is executed against data sources
 
-If **renderer**  contains ANY string SRS is executed against data sources
+
+## Examples
 
 
-```http
-GET {host}/api/srs/{app_name}/{srs_name}/{renderer}?{querystring}&ptype={type ex:xlsx,html,svg}
-```
+### GET  BADGE
 
-```http
-POST {host}/api/srs/{app_name}/{srs_name}/{renderer}?{querystring}
-```
-
-***GET BADGE***
+**Request**
 
 ```http
 GET {{host}}/api/srs/{app_name}/view?ptype=svg
 ```
 
+**Response**
 
+image
 
-## Example definition with parameters
-
-> Example  require Chinook Database see more at https://github.com/lerocha/chinook-database 
-
-``` xml
- <SRS>
- <title>
- Hello paanda
- </title>
-
- <parameters>
-  <param name="BillingAddress" ></param>
-  <param name="InvoiceDate_from" type="date"></param>
-  <param name="InvoiceDate_to" type="date"></param>
- </parameters>
-
-<commands>
-<command>
-<![CDATA[
-
-SELECT top 3
-   [InvoiceDate]
-   ,[BillingAddress]
-   ,[BillingCity]
-   ,[BillingState]
-   ,[BillingCountry]
-   ,[BillingPostalCode]
-   ,[Total]
-FROM  [dbo].[Invoice]
-where  
-   (@BillingAddress is null or BillingAddress like @BillingAddress)
-   and (@InvoiceDate_from is null or InvoiceDate >= @InvoiceDate_from)
-   and (@InvoiceDate_to is null or InvoiceDate <= @InvoiceDate_to)
-]]>
-</command>
-</commands>
-  
-</SRS>
-```
-
-## Run Definition
+### Run Definition
 
 Nothing happens here just return definition without executing any command
 
@@ -75,7 +51,7 @@ GET {{host}}/api/srs/examples/hello-parameters HTTP/1.1
 Authorization: Bearer {{token}}
 ```
 
-## Execute JSon
+### GET JSON
 
 Any renderer will execute command  
 
@@ -84,7 +60,7 @@ GET {{host}}/api/srs/examples/hello-parameters/1 HTTP/1.1
 Authorization: Bearer {{token}}
 ```
 
-## Execute EXCEL
+## GET EXCEL
 
 ```http3
 GET {{host}}/api/srs/examples/hello-parameters/1?ptype=xlsx HTTP/1.1
