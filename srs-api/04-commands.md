@@ -8,7 +8,7 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
 
 - `name` - **optional**name of dataset default value 1,2,3,4,5
 - `connection` - **optional** connection name by default use default APP connection
-  - `connection="self"`  is a special kind of provider you can join different commands
+  - `connection="self"`  is a special kind of provider you can query different commands (from diferent connection) like databases
 - `label` - **optional** display label
 - `title` - **optional** title on hover
 - `type` - **optional**
