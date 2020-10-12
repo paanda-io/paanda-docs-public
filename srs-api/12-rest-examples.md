@@ -18,10 +18,12 @@ Authorization: Bearer {{token}}
 }
 ```
 
-
+- Authorization methods , three options are available:
+  - `ptoken`  **OPTIONAL** query parameter
+  - Authorization: Bearer method
+  - Cookie ptoken
 - `app_name` **REQUIRED** application context 
 - `srs_name` **REQUIRED** SRS definition name 
-- `ptoken`  **OPTIONAL** token reaplacing header token
 - `pformat`  **OPTIONAL** pretty print
 - `ptype`  **OPTIONAL** type of expeceted response (default JSON)  [see target:type](/srs-api/08-targets.md#target-type)
 - `renderer`  **OPTIONAL** renderer
