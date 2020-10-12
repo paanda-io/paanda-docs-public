@@ -23,7 +23,7 @@ Authorization: Bearer {{token}}
 - `srs_name` **REQUIRED** SRS definition name 
 - `ptoken`  **OPTIONAL** token reaplacing header token
 - `pformat`  **OPTIONAL** pretty print
-- `ptype`  **OPTIONAL** type of expeceted response (default JSON)  see targets list
+- `ptype`  **OPTIONAL** type of expeceted response (default JSON)  [see target:type](/srs-api/08-targets.md#target-type)
 - `renderer`  **OPTIONAL** renderer
 - `querystring` **OPTIONAL** all query strings value are passed to processor
 - `renderer`  **OPTIONAL** if  contains ANY string SRS is executed against data sources
