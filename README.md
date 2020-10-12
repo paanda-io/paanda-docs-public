@@ -27,8 +27,8 @@ Paanda is built on three layer concept, every operation is available as rest API
     - TEAMS
     - ROLES
   - STORAGE 
-- **UI**
-  - [User Interface](/ui-api/README.md) 
+- **App**
+  - [User Interface and app structure](/ui-api/README.md) 
   Supports: Live preview, custom UI for every app
 
 ## Extensions
