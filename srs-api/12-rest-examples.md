@@ -64,7 +64,7 @@ Authorization: Bearer {{token}}
 
 ### GET EXCEL
 
-```http3
+```http
 GET {{host}}/api/srs/examples/hello-parameters/1?ptype=xlsx HTTP/1.1
 
 Authorization: Bearer {{token}}
@@ -72,10 +72,10 @@ Authorization: Bearer {{token}}
 
 ### Example API request
 
-```htttp
+```http
 GET {host}/api/srs/{app_name}/{srs_name}/{srs renderer]}?[parameters]&ptype=[target type]&ptoken=[bearertoken]
 ```
 
-```htttp
+```http
 POST {host}/api/srs/{app_name}/{srs_name}/{srs renderer]}?[parameters]&ptype=[target type]&ptoken=[bearertoken]
 ```
