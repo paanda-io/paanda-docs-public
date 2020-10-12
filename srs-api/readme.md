@@ -32,14 +32,3 @@ SRS is an core Paanda module  which extract transform and load data from various
 
 ```
 
-Read more ...
-
-- [Connections](/02-connections.md)  
-- [Parameters](/03-Parameters.md)  
-- [Commands](/04-commands.md)  
-- [Columns](/05-columns.md)  
-- [Options](/06-options.md)  
-- [Targets](/08-targets.md)
-- [Permissions](/09-permissions.md)
-- [Renderer](/11-renderer.md)
-- [Rest Examples](/12-rest-examples.md)
