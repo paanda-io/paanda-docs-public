@@ -23,7 +23,7 @@ Authorization: Bearer {{token}}
 - `srs_name` **REQUIRED** SRS definition name 
 - `ptoken`  **OPTIONAL** token reaplacing header token
 - `pformat`  **OPTIONAL** pretty print
-- `ptype`  **OPTIONAL** type of expeceted response (default JSON)  
+- `ptype`  **OPTIONAL** type of expeceted response (default JSON)  see targets list
 - `renderer`  **OPTIONAL** renderer
 - `querystring` **OPTIONAL** all query strings value are passed to processor
 - `renderer`  **OPTIONAL** if  contains ANY string SRS is executed against data sources
@@ -44,28 +44,11 @@ GET {{host}}/api/srs/{app_name}/view?ptype=svg
 
 image
 
-### Run Definition
-
-Nothing happens here just return definition without executing any command
-
-```http
-GET {{host}}/api/srs/examples/hello-parameters HTTP/1.1
-Authorization: Bearer {{token}}
-```
-
-### GET JSON
-
-Any renderer will execute command  
-
-```http
-GET {{host}}/api/srs/examples/hello-parameters/1 HTTP/1.1
-Authorization: Bearer {{token}}
-```
 
 ### GET EXCEL
 
 ```http
-GET {{host}}/api/srs/examples/hello-parameters/1?ptype=xlsx HTTP/1.1
+GET {{host}}/api/srs/examples/hello-parameters/1?ptype=xlsx
 
 Authorization: Bearer {{token}}
 ```
