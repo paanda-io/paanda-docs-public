@@ -47,14 +47,13 @@ required-app: paanda, platformaERP
 - [erp].[orderLine_InsertUpdate] - zapis / aktualizacja pozycji zamówienia
 - [erp].[orderline_List] - 
 ### Słowniki:
-
- 	- Słownik magazynów,
- 	- Słownik sposobu dostawy,
-	- Słownik walut,
- 	- Słownik sposobu płatności,
- 	- Słownik jednostek miary,
- 	- Słownik typów dokumentów zamówienia,
- 	- Słownik stawek VAT.
+ - Słownik magazynów,
+ - Słownik sposobu dostawy,
+ - Słownik walut,
+ - Słownik sposobu płatności,
+ - Słownik jednostek miary,
+ - Słownik typów dokumentów zamówienia,
+ - Słownik stawek VAT.
 
 **Przykład użycia dla `warehouse`**
 
