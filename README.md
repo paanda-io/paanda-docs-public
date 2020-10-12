@@ -11,23 +11,16 @@
 Paanda is built on three layer concept, every operation is available as rest API
 
 
-- **DATA ACCESS ** 
-  
-  SRS file format , Extract Transform Load data.
-  
+- **DATA ACCESS**     SRS file format , Extract Transform Load data.
   - [FORMAT SPECIFICATION](/srs-api)  
-  
 - **CORE**
-  
   - [SRS file format processor](/srs-api/12-rest-examples.md) 
   - USER MANAGMENT LAYER
     - ACCOUNTS
     - TEAMS
     - ROLES
   - STORAGE 
-  
-- **UI **
-
+- **UI**
   Supports: Live preview, custom UI for every app
 
 ## CUSTOM EXTENSIONS
