@@ -41,7 +41,7 @@ required-app: paanda, platformaERP
   - itemConvertUnitID
 ### Procedury
 - [erp].[order_get] - pobranie zamówienia i listę pozycji
-- [erp].[InsertUpdate] - zapis / aktualizacja zamówienia
+- [erp].[order_InsertUpdate] - zapis / aktualizacja zamówienia
 - [erp].[UpdateOrderStatus] - 
 - [erp].[orderLine_document] - 
 - [erp].[orderLine_InsertUpdate] - zapis / aktualizacja pozycji zamówienia
