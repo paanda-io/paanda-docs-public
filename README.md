@@ -31,9 +31,9 @@ Paanda is built on three layer concept, every operation is available as rest API
   - [User Interface](/ui-api/README.md) 
   Supports: Live preview, custom UI for every app
 
-## CUSTOM EXTENSIONS
+## Extensions
 
-### ERP API (PL)
+### ERP/MRP API (PL)
 
 - [ERP WSTĘP](/erp-api)  
 - Documents
