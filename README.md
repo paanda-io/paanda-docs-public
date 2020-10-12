@@ -55,7 +55,7 @@ Paanda is built on three layer concept, every operation is available as rest API
 
 | FEATURE | CLOUD | DATA CENTER | SERVER |
 | --- | --- | --- | --- |
-| --- | Availabe at paanda.io | Dedicated server | You infrastructure |
+| --- | Availabe at paanda.io | Dedicated server | Your infrastructure |
 | Connection Manager | YES | YES | YES |
 | EXCEL provider | YES | YES | YES |
 | SQL Server Provider | YES | YES | YES |
