@@ -46,9 +46,23 @@ required-app: paanda, platformaERP
 - [erp].[orderLine_document] - 
 - [erp].[orderLine_InsertUpdate] - zapis / aktualizacja pozycji zamówienia
 - [erp].[orderline_List] - 
-### Słowniki
+### Słowniki:
 
-**Przykład użycia**
+### 	- Słownik magazynów,
+
+### 	- Słownik sposobu dostawy,
+
+### 	- Słownik walut,
+
+### 	- Słownik sposobu płatności,
+
+### 	- Słownik jednostek miary,
+
+### 	- Słownik typów dokumentów zamówienia,
+
+### 	- Słownik stawek VAT.
+
+**Przykład użycia dla** `warehouse`
 
 ```http
 GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
@@ -58,7 +72,7 @@ GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
 
 **orderStatus - status dokumentu zamówienia**
 
-###General
+## General 
 
 - status
   - `-1` usuniety
@@ -85,7 +99,7 @@ GET {host}/api/erp/order/get/{app_name}/{orderID}
 - data.orderline - pozycje zamówienia  ( SQL PROCEDURE erp.orderline_List)
 
 
-## 2 Nagłówek zamówienia 
+## 5 Nagłówek zamówienia 
 
 Rodzaj zamówienia - `description`
 
@@ -119,54 +133,7 @@ Data kursu - `currencyExchangeDate`
 
 Kurs - `currencyExchangeRate`
 
-
-## 3 Słowniki:
-
-**Request**
-
-### Słownik magazynów:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
-```
-
-### Słownik sposobu dostawy:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/deliveryWay
-```
-
-### Słownik walut:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/currency
-```
-
-### Słownik sposobu płatności:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/paymentType
-```
-
-### Słownik jednostek miary:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/itemUnit
-```
-
-### Słownik typów dokumentów zamówienia:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/documenttype?query=order
-```
-
-### Słownik stawek VAT:
-
-```http
-GET {host}/api/erp/dictionary/browse/{app_name}/system.taxrate
-```
-
-## 4 Kartoteki:
+## 6 Kartoteki:
 
 **Request**
 
@@ -184,7 +151,7 @@ GET {host}/api/erp/firm/browse/{app_name}/orderDelivery
 
 
 
-## 5 Zapisanie nagłówka 
+## 7 Zapisanie nagłówka 
 
 **Request**
 
@@ -204,7 +171,7 @@ this.genericPost('/api/erp/order/set-header/{app_name}/{orderid}', this.api.data
 
 ```
 
-## 6 Zatwierdzenie zamówienia , usunięcie zamówienia
+## 8 Zatwierdzenie zamówienia , usunięcie zamówienia
 
 **Request**
 
@@ -220,8 +187,8 @@ Usunięcie
 {host}/api/erp/order/set-status/{app_name}/{orderid}?status=-1
 ```
 
-## 7 Tabela pozycji zamówień:
- 
+## 9 Tabela pozycji zamówień:
+
 Indeks Mag. - `orderline.itemcode`  
 Nazwa - `orderline.itemOrderName`  
 JM. - `orderline.dictionaryValue`  
@@ -231,7 +198,7 @@ Zrealiz. - Co tutaj ?
 Wartość Netto - `orderline.itemValue`  
 Oczekiwana/ Potwierdzona data - `orderline.orderLineExpectedDate`  
 
-## 8 Dodawanie/ usuwanie pozycji zamówienia
+## 10 Dodawanie/ usuwanie pozycji zamówienia
 
 Zapisanie pozycji
 
@@ -258,7 +225,7 @@ this.genericPost('/api/erp/order/set-line/{app_name}/{orderid}', this.api.data.o
 ```
 
 
-## 9 Pobranie listy indeksów do dodawania pozycji w zamównieniu
+## 11 Pobranie listy indeksów do dodawania pozycji w zamównieniu
 
 *Request*
 
@@ -269,7 +236,7 @@ GET {host}/api/erp/dictionary/browse/{app_name}/items-for-order?true&query=PUDEL
 ```
 
 
-## 10 profil użytkownika  np zeby dostac user_app_name
+## 12 Profil użytkownika  np zeby dostac user_app_name
 
 *Request*
 
