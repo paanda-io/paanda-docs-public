@@ -58,7 +58,7 @@ required-app: paanda, platformaERP
 
 **Przykład użycia dla `warehouse`**
 
-```http
+```http 
 GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
 ```
 
