@@ -9,7 +9,7 @@ The Paanda API is built on HTTP. API is RESTful and it:
 
 Example
 
-```
+```http
 GET {host}/api/system/ping
 ```
 Returns: Authorized or Not authorized
