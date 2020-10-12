@@ -48,21 +48,15 @@ required-app: paanda, platformaERP
 - [erp].[orderline_List] - 
 ### Słowniki:
 
-### 	- Słownik magazynów,
+ 	- Słownik magazynów,
+ 	- Słownik sposobu dostawy,
+	- Słownik walut,
+ 	- Słownik sposobu płatności,
+ 	- Słownik jednostek miary,
+ 	- Słownik typów dokumentów zamówienia,
+ 	- Słownik stawek VAT.
 
-### 	- Słownik sposobu dostawy,
-
-### 	- Słownik walut,
-
-### 	- Słownik sposobu płatności,
-
-### 	- Słownik jednostek miary,
-
-### 	- Słownik typów dokumentów zamówienia,
-
-### 	- Słownik stawek VAT.
-
-**Przykład użycia dla** `warehouse`
+**Przykład użycia dla `warehouse`**
 
 ```http
 GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
