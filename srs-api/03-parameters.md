@@ -256,8 +256,12 @@ There are few predefined variables available.
 
 Built in variables marked in double brackets  `[[kv.v.variable1]]`
 
-- `[[kv.v.user.username]]`
 - `[[kv.v.owner.name]]` Owner Name, also in footer
 - `[[kv.v.owner.contact]]` Owner contact, also in footer
 - `[[kv.v.owner.footer]]` Footer additional text
 - `[[kv.v.owner.language]]` Default language
+- `[[kv.v.user.username]]`
+- `[[kv.v.user.teams]]` Teams
+- `[[kv.v.user.roles]]` Roles
+
+
