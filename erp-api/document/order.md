@@ -1,3 +1,4 @@
+
 ---
 status: ALPHA
 language: PL
@@ -78,21 +79,7 @@ GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
 - `v_order`  komponent
 - https://app.paanda.io/pages/erp/v-order - interface
 
-## 4 Pobranie pozycji zamówienia (orderlines) i nagłówek zamówienia (order)
-
-**Request**
-
-```http
-GET {host}/api/erp/order/get/{app_name}/{orderID}
-```
-
-**Response**
-
-- data.order - nagłówek zamówienia  ( SQL PROCEDURE erp.order_get)
-- data.orderline - pozycje zamówienia  ( SQL PROCEDURE erp.orderline_List)
-
-
-## 5 Nagłówek zamówienia 
+## 4 Nagłówek zamówienia 
 
 Rodzaj zamówienia - `description`
 
@@ -126,7 +113,21 @@ Data kursu - `currencyExchangeDate`
 
 Kurs - `currencyExchangeRate`
 
-## 6 Kartoteki:
+## 10 API - REST API
+### 10.1 Pobranie pozycji zamówienia (orderlines) i nagłówek zamówienia (order)
+
+**Request**
+
+```http
+GET {host}/api/erp/order/get/{app_name}/{orderID}
+```
+
+**Response**
+
+- data.order - nagłówek zamówienia  ( SQL PROCEDURE erp.order_get)
+- data.orderline - pozycje zamówienia  ( SQL PROCEDURE erp.orderline_List)
+
+### 10.2 Kartoteki:
 
 **Request**
 
@@ -142,7 +143,7 @@ GET {host}/api/erp/firm/browse/{app_name}/order
 GET {host}/api/erp/firm/browse/{app_name}/orderDelivery
 ```
 
-## 7 Zapisanie nagłówka 
+### 10.3 Zapisanie nagłówka 
 
 **Request**
 
@@ -162,7 +163,7 @@ this.genericPost('/api/erp/order/set-header/{app_name}/{orderid}', this.api.data
 
 ```
 
-## 8 Zatwierdzenie zamówienia , usunięcie zamówienia
+### 10.4 Zatwierdzenie zamówienia , usunięcie zamówienia
 
 **Request**
 
@@ -178,7 +179,7 @@ Usunięcie
 {host}/api/erp/order/set-status/{app_name}/{orderid}?status=-1
 ```
 
-## 9 Tabela pozycji zamówień:
+### 10.5 Tabela pozycji zamówień:
 
 Indeks Mag. - `orderline.itemcode`  
 Nazwa - `orderline.itemOrderName`  
@@ -189,7 +190,7 @@ Zrealiz. - Co tutaj ?
 Wartość Netto - `orderline.itemValue`  
 Oczekiwana/ Potwierdzona data - `orderline.orderLineExpectedDate`  
 
-## 10 Dodawanie/ usuwanie pozycji zamówienia
+### 10.6 Dodawanie/ usuwanie pozycji zamówienia
 
 Zapisanie pozycji
 
@@ -216,7 +217,7 @@ this.genericPost('/api/erp/order/set-line/{app_name}/{orderid}', this.api.data.o
 ```
 
 
-## 11 Pobranie listy indeksów do dodawania pozycji w zamównieniu
+### 10.7 Pobranie listy indeksów do dodawania pozycji w zamównieniu
 
 *Request*
 
@@ -227,7 +228,7 @@ GET {host}/api/erp/dictionary/browse/{app_name}/items-for-order?true&query=PUDEL
 ```
 
 
-## 12 Profil użytkownika np zeby dostac user_app_name
+### 10.8 Profil użytkownika np zeby dostac user_app_name
 
 *Request*
 
