@@ -1,6 +1,6 @@
 # SRS File Format processor
 
-SRS file format processor transform Paanda file definition to operations. 
+SRS file format processor transform Paanda file definition to data operations. 
 
 ## Quickstart REST API
 
@@ -25,7 +25,7 @@ Authorization: Bearer {{token}}
 - `pformat`  **OPTIONAL** pretty print
 - `ptype`  **OPTIONAL** type of expeceted response (default JSON)  
 - `renderer`  **OPTIONAL** renderer
-- `querystring` **OPTIONAL** all query strings value are passed to engine
+- `querystring` **OPTIONAL** all query strings value are passed to processor
 - `renderer`  **OPTIONAL** if  contains ANY string SRS is executed against data sources
 
 
