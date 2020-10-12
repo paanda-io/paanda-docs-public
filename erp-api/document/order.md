@@ -1,10 +1,9 @@
 
----
+
 status: ALPHA
 language: PL
 title: "API Zamówienia"
 required-app: paanda, platformaERP
----
 
 # Dokument zamówienia ZZW, ZP, ZS, ZO...
 
