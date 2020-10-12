@@ -142,8 +142,6 @@ GET {host}/api/erp/firm/browse/{app_name}/order
 GET {host}/api/erp/firm/browse/{app_name}/orderDelivery
 ```
 
-
-
 ## 7 Zapisanie nagłówka 
 
 **Request**
@@ -229,7 +227,7 @@ GET {host}/api/erp/dictionary/browse/{app_name}/items-for-order?true&query=PUDEL
 ```
 
 
-## 12 Profil użytkownika  np zeby dostac user_app_name
+## 12 Profil użytkownika np zeby dostac user_app_name
 
 *Request*
 
