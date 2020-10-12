@@ -5,12 +5,12 @@ SRS file format processor transform Paanda file definition to operations.
 ## Quickstart REST API
 
 ```http
-GET {host}/api/srs/{app_name}/{srs_name}/{renderer}?ptype={ptype}&ptoken={bearertoken}
+GET {host}/api/srs/{app_name}/{srs_name}/{renderer}?ptype={ptype}&ptoken={bearertoken}&pformat={true}
 Authorization: Bearer {{token}}
 ```
 
 ```http
-POST {host}/api/srs/{app_name}/{srs_name}/{renderer}?{querystring}&ptoken={bearertoken}
+POST {host}/api/srs/{app_name}/{srs_name}/{renderer}?ptype={ptype}&ptoken={bearertoken}&pformat={true}
 Authorization: Bearer {{token}}
 {
     "param1": "value1",
@@ -18,13 +18,15 @@ Authorization: Bearer {{token}}
 }
 ```
 
-- `ptype` optional token reaplacing header token
-- `ptype` optional type of expeceted response (default JSON) 
-- `app_name` application context **REQUIRED**
-- `srs_name` SRS definition name **REQUIRED** 
-- `renderer` renderer **OPTIONAL**
+
+- `app_name` **REQUIRED** application context 
+- `srs_name` **REQUIRED** SRS definition name 
+- `ptoken`  **OPTIONAL** token reaplacing header token
+- `pformat`  **OPTIONAL** pretty print
+- `ptype`  **OPTIONAL** type of expeceted response (default JSON)  
+- `renderer`  **OPTIONAL** renderer
 - `querystring` **OPTIONAL** all query strings value are passed to engine
-- **renderer** if  contains ANY string SRS is executed against data sources
+- `renderer`  **OPTIONAL** if  contains ANY string SRS is executed against data sources
 
 
 ## Examples
@@ -60,7 +62,7 @@ GET {{host}}/api/srs/examples/hello-parameters/1 HTTP/1.1
 Authorization: Bearer {{token}}
 ```
 
-## GET EXCEL
+### GET EXCEL
 
 ```http3
 GET {{host}}/api/srs/examples/hello-parameters/1?ptype=xlsx HTTP/1.1
@@ -68,7 +70,7 @@ GET {{host}}/api/srs/examples/hello-parameters/1?ptype=xlsx HTTP/1.1
 Authorization: Bearer {{token}}
 ```
 
-## Example API request
+### Example API request
 
 ```htttp
 GET {host}/api/srs/{app_name}/{srs_name}/{srs renderer]}?[parameters]&ptype=[target type]&ptoken=[bearertoken]
