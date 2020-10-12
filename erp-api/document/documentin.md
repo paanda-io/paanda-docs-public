@@ -1,11 +1,51 @@
+---
+status: ALPHA
+language: PL
+title: "API Dokument przyjęcia"
+required-app: paanda, platformaERP
+---
+
 # Dokument przyjęcia PZ,PZI,PW ...
 
-## User interface
+## 1 DB - Objects
 
-- `v_documentin`  komponent
-- https://app.paanda.io/pages/erp/documentin - interface
+### Tabele
+- [document].[document] - dokument, 
+- [document].[documentLine] - pozycje dokumentu
 
-## General
+### Procedury
+- [erp].[document_get] - pobranie zamówienia i listę pozycji
+- [erp].[document_InsertUpdate] - zapis / aktualizacja zamówienia
+- [erp].[document_updateDocumentStatus] - aktualizacja statusu dokumentu
+- [erp].[documentline_List] - pobranie listy pozycji dokumentu 
+- [erp].[documentline_InsertUpdate] - zapis / aktualizacja pozycji zamówienia
+
+### Słowniki:
+#### Przykłady słowników
+	- Słownik magazynów,
+	- Typy dokumentów,
+	- Słownik walut,
+	- Słownik jednostki miar,
+	
+**Response**
+#### Procedura
+	- data.list  ( SQL PROCEDURE [erp].[dictionary_bynameValue])
+
+**Request**
+
+```http
+{host}/api/erp/dictionary/browse/{app_name}/{dictionary_name}
+```
+
+**Przykład użycia dla `Słownik magazynów (warehouse)`**
+
+```http
+GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
+```
+
+## 2 Ustawienia / zmienne
+
+### General
 
 **documentStatus - status dokumentu**
 
@@ -15,8 +55,18 @@
   - `>0` zatwierdzony
 - `{app_name}` moze byc zastapiony `[[app_name]]`
 
+### Konfiguracja kolumn
 
-## 1 Pobranie pozycji i dokumentu
+- tabela [dbo].[columns ]
+
+##  3 UI - User interface
+
+- `v_documentin`  komponent
+- https://app.paanda.io/pages/erp/documentin - interface
+
+
+## 10 API - REST API
+### 10.1 Pobranie pozycji i dokumentu
 
 **Request**
 
@@ -29,7 +79,7 @@ GET {host}/api/erp/document/get/{app_name}/{document_id}
 - data.document - nagłówek   ( SQL PROCEDURE erp.document_get)
 - data.documentline - pozycje  ( SQL PROCEDURE erp.documentline_list)
 
-## 2 Kartoteka firm 
+### 10.2 Kartoteka firm 
 
 **Request**
 
@@ -43,7 +93,7 @@ GET {host}/api/erp/firm/browse/platformaerp/documentin?query=
 
 - data.list - lista firm ( SQL PROCEDURE erp.firm_list)
 
-## 3 Kartotek indeksów dla dokumentu PZ
+### 10.3 Kartotek indeksów dla dokumentu PZ
 
 **Request**
 
@@ -57,9 +107,7 @@ GET {host}/api/erp/item/browse/platformaerp/documentin?query=pudelko
 
 - data.list - lista firm ( SQL PROCEDURE erp.item_list)
 
-
-
-## 5 Dokument,  zapisanie nagłówka , zapisanie pozycji , usuwanie pozycji
+### 10.4 Dokument,  zapisanie nagłówka , zapisanie pozycji , usuwanie pozycji
 
 **Request**
 
@@ -94,7 +142,7 @@ this.genericPost('/api/erp/document/set-line/platformaerp/{documentid}', this.ap
 this.genericPost('/api/erp/document/delete-line/platformaerp/{documentLineID}', this.api.data.documentline,this.fetchData);
 ```
 
-## 6 Zatwierdzenie dokumentu , usunięcie dokumentu
+###  10.5 Zatwierdzenie dokumentu , usunięcie dokumentu
 
 **Request**
 
@@ -110,7 +158,7 @@ Usunięcie
 /api/erp/document/set-status/platformaerp/{documentid}?status=-1
 ```
 
-##  7 Pobieranie listy zamówień nie zrealizowanych do dokumentu PZ
+### 10.6 Pobieranie listy zamówień nie zrealizowanych do dokumentu PZ
 
 **User interface**
 
@@ -126,7 +174,7 @@ dla firmy anstepnie wystawić dokuemnt PZ/PZI dla tego samego kontrahenta
 /api/erp/document/open-order-lines/{app_name}/{documentid}
 ```
 
-## 8 Dodanie pozycji zamówienia do dokumentu
+### 10.7 Dodanie pozycji zamówienia do dokumentu
 
 **Request**
 
@@ -134,59 +182,7 @@ dla firmy anstepnie wystawić dokuemnt PZ/PZI dla tego samego kontrahenta
 POST /api/erp/document/orderline-close/{app_name}/{orderlineid}/{documentid}
 ```
 
-## 9 Słowniki
-
-
-
-### Konfiguracja kolumn
-
-- tabela [dbo].[columns ]
-
-### Lista słowników przykłady 
-
-agreementType , area , attributegroup, attributeRelationtype ,campaignLineStatus, campaignStatus , commisionCategory,contactPosition,countrycode, currency, deliverycode, **deliveryWay**, discountcategory, **firmType**, iEventStatus, itemcategory, itemgroup, itemsubcategory**itemUnit**, language, eadSource, leaduser ocationtype, MPK, offerrelationtype, offerType, operationType, opportunityStage, organisationUnit, packtype, paymentSheduleType, paymenttype, pkwiu, productFaultType, system, system.accountingAccountName, system.accountingVat, system.agreementStatus, system.commisionstatus, system.dictionaryname, system.distanceRateKM, system.documentstatus, system.inventoryStatus, system.invoiceStatus, system.offerStatus, **system.orderStatus**, **system.orderType (obsolete usedocument.documenttype)**, system.permission, system.role, system.sale, system.service, **system.taxrate**, team, technologyType,termsofdelivery
-
-**Request**
-
-```http
-{host}/api/erp/dictionary/browse/{app_name}/{dictionary_name}
-```
-
-**Response**
-
-- data.list  ( SQL PROCEDURE [erp].[dictionary_bynameValue])
-
-### Słownik magazynów
-
-**Request**
-
-```http
-GET {host}/api/erp/dictionary/browse/platformaerp/warehouse
-```
-
-### Typy dokumentów
-
-**Request**
-
-```http
-{host}/api/erp/dictionary/browse/{app_name}/documenttype?query=documentin
-```
-
-###  Słownik walut
-
-```http
-{host}/api/erp/dictionary/browse/{app_name}/currency
-```
-
-###  Słownik jednostki miar
-
-```http
-{host}/api/erp/dictionary/browse/{app_name}/itemunit
-```
-
-## 11 Zlecenia do dokumentu pw
-
-
+### 10.8 Zlecenia do typu dokumentu PW
 
 **Request**
 
@@ -195,8 +191,6 @@ Wybor zlecenia na naglowku [erp].[commision_List_dictionary]
 ```
 {host}/api/erp/dictionary/browse/{app_name}/open-commision?query=
 ```
-
-
 
 Wybor zlecenia na pozycji 
 
