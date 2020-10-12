@@ -1,3 +1,9 @@
+---
+status: ALPHA
+language: PL
+title: "API Dokument przyjęcia"
+required-app: paanda, platformaERP
+---
 
 # Dokument przyjęcia PZ,PZI,PW ...
 
@@ -15,16 +21,16 @@
 - [erp].[documentline_InsertUpdate] - zapis / aktualizacja pozycji zamówienia
 
 ### Słowniki:
-**Response**
-#### Procedura
-	- data.list  ( SQL PROCEDURE [erp].[dictionary_bynameValue])
-
 #### Przykłady słowników
 	- Słownik magazynów,
 	- Typy dokumentów,
 	- Słownik walut,
 	- Słownik jednostki miar,
- 
+	
+**Response**
+#### Procedura
+	- data.list  ( SQL PROCEDURE [erp].[dictionary_bynameValue])
+
 **Request**
 
 ```http
