@@ -1,8 +1,9 @@
-
+---
 status: ALPHA
 language: PL
 title: "API Umowy"
 required-app: paanda, platformaERP
+---
 
 # Umowy
 
