@@ -5,14 +5,13 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
 
 ## Attributes
 
-> All Attributes are optional
 
-- `name` - name of dataset default value 1,2,3,4,5
-- `connection` - OPTIONAL connection name by default use default APP connection
+- `name` - **optional**name of dataset default value 1,2,3,4,5
+- `connection` - **optional** connection name by default use default APP connection
   - `connection="self"`  is a special kind of provider you can join different commands
-- `label` - OPTIONAL display label
-- `title` - OPTIONAL title on hover
-- `type` - OPTIONAL
+- `label` - **optional** display label
+- `title` - **optional** title on hover
+- `type` - **optional**
   - empty  **(default)**  - render as a table at client
   - server - server side only used to compute properties, not returned
   - hidden - hidden returned
