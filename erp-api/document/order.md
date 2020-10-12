@@ -1,14 +1,64 @@
+---
+status: ALPHA
+language: PL
+title: "API Zamówienia"
+required-app: paanda, platformaERP
+---
+
 # Dokument zamówienia ZZW, ZP, ZS, ZO...
 
+## Zamówienia
 
-## User interface
+## 1 Obiekty Bazy Danych
 
-- `v_order`  komponent
-- https://app.paanda.io/pages/erp/v-order - interface
+### Tabele
+- [document].[order] - zamównienia, 
+  - orderID
+  - orderNR
+  - orderFullNR
+  - orderTypeID
+  - orderExpectedDate
+  - orderMemo
+  - orderStatus
+  - deliveryFirmID
+  - isPriceVisible
+  - paymentTypeID
+  - deliveryWayID
+  - currencyID
+  - paymentTime
+  - warehouseID
+  - currencyExchangeRate
+  - termsOfDelivery
+- [document].[orderLine]
+  - orderLineID
+  - orderID
+  - itemUnitOrderID
+  - itemID
+  - itemPrice
+  - itemQuantity
+  - itemValue
+  - itemTaxRate
+  - itemConvertUnitID
+### Procedury
+- [erp].[order_get] - pobranie zamówienia i listę pozycji
+- [erp].[InsertUpdate] - zapis / aktualizacja zamówienia
+- [erp].[UpdateOrderStatus] - 
+- [erp].[orderLine_document] - 
+- [erp].[orderLine_InsertUpdate] - zapis / aktualizacja pozycji zamówienia
+- [erp].[orderline_List] - 
+### Słowniki
 
-## General
+**Przykład użycia**
+
+```http
+GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
+```
+
+## 2 Ustawienia / Zmienne 
 
 **orderStatus - status dokumentu zamówienia**
+
+###General
 
 - status
   - `-1` usuniety
@@ -16,7 +66,12 @@
   - `>0` zatwierdzony
 - `{app_name}` moze byc zastapiony `[[app_name]]`
 
-## 1 Pobranie pozycji zamówienia (orderlines) i nagłówek zamówienia (order)
+## 3 UI - User Interface
+
+- `v_order`  komponent
+- https://app.paanda.io/pages/erp/v-order - interface
+
+## 4 Pobranie pozycji zamówienia (orderlines) i nagłówek zamówienia (order)
 
 **Request**
 
