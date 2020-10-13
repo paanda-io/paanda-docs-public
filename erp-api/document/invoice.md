@@ -8,6 +8,15 @@ required-app: platformaERP
 
 - [x] wystawianie faktury z kontekstu dokumentów
 - [ ] kopia faktury
+
+API kopiowanie faktury
+
+```sql
+  sql.execute("[document].[invoice_copy]"
+  , new { username = cc.auth.profile.userName(), sourceInvoiceID = sourceInvoiceID, invoiceID = invoiceID, invoiceIssueDate = invoiceIssueDate, 
+  resultInvoiceType = resultInvoiceType, copyAutoAssignItemTaxRatesAndCalculateTax = copyAutoAssignItemTaxRatesAndCalculateTax });
+```
+
 - [ ] usuniecie pozycji
 
 # Faktura 
@@ -47,7 +56,7 @@ required-app: platformaERP
 
 ### Przykład
 
-```http localhost:5500/pages/erp/v-invoice-purchase?app_name=platformaerp``` - tworzenie nowego dokumentu
+```localhost:5500/pages/erp/v-invoice-purchase?app_name=platformaerp``` - tworzenie nowego dokumentu
 
 ## 10 API - REST API
 
@@ -70,7 +79,7 @@ GET {host}/api/erp/invoice/get/{app_name}/{invoice_id}
 - [erp].[invoice_get]
 - [erp].[invoiceline_list]
 
-## 3 API Zapisanie nagłówka i pozycji
+## 10.2 API Zapisanie nagłówka i pozycji
 
 **Request**
 
@@ -92,10 +101,4 @@ POST {host}/api/erp/invoice/set-line/{app_name}/{invoiceid}
 - [erp].[invoiceLine_InsertUpdate]
 
 
-## 4 TODO API kopiowanie faktury
 
-```sql
-            sql.execute("[document].[invoice_copy]"
-                , new { username = cc.auth.profile.userName(), sourceInvoiceID = sourceInvoiceID, invoiceID = invoiceID, invoiceIssueDate = invoiceIssueDate, resultInvoiceType = resultInvoiceType, copyAutoAssignItemTaxRatesAndCalculateTax = copyAutoAssignItemTaxRatesAndCalculateTax });
-
-```
