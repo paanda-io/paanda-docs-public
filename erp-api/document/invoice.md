@@ -19,8 +19,12 @@ required-app: platformaERP
   - invoiceCategory - typ dokumentu
   - invoiceIssueDate - data wystawienia faktury
 - [document].invoiceline
+
 ### Procedury
 - [erp].[invoice_InsertUpdate]
+- [erp].[invoice_get]
+- [erp].[invoiceLine_InsertUpdate]
+- [erp].[invoiceline_list]
 
 
 ## 2. Ustawienia / zmienne / parametry
@@ -38,7 +42,13 @@ required-app: platformaERP
 
 - Faktura zakupu przykład / platformaERP https://master.platformacrm.pl/ERP/invoicePurchase/8c0c19b2-86f2-ea11-a98a-060c7c3ef0b7
 - komponent: v_invoice_purchase
-- [https://app.paanda.io/pages/erp/v-invoice-purchase] - interface faktury
+- localhost/pages/erp/v-invoice-purchase?app_name=platformaerp - (client) interface faktury
+- Wymagany app_name
+
+### Przykład
+
+localhost:/pages/erp/v-invoice-purchase?app_name=platformaerp - tworzenie nowego dokumentu
+
 
 ## 10 API - REST API
 
