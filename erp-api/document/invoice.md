@@ -6,7 +6,7 @@ required-app: platformaERP
 ---
 ## TODO
 
-- [ ] wystawianie faktury z kontekstu dokumentów
+- [x] wystawianie faktury z kontekstu dokumentów
 - [ ] kopia faktury
 - [ ] usuniecie pozycji
 
