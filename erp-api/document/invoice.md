@@ -47,9 +47,7 @@ required-app: platformaERP
 
 ### Przykład
 
-```http
-localhost:5500/pages/erp/v-invoice-purchase?app_name=platformaerp - tworzenie nowego dokumentu
-```http
+```http localhost:5500/pages/erp/v-invoice-purchase?app_name=platformaerp``` - tworzenie nowego dokumentu
 
 ## 10 API - REST API
 
