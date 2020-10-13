@@ -4,6 +4,10 @@ language: PL
 title: "API Faktura Zakupu / Sprzedaży"
 required-app: platformaERP
 ---
+## INFO
+
+Na razie w procedurze [erp].[invoice_InsertUpdate] @invoiceCategory jest ustawione na (5). Większe wartości mogą wyrzucać błąd (Potrzebna zmiana wielkości w tabeli docelowej).
+
 ## TODO
 
 - [x] wystawianie faktury z kontekstu dokumentów
@@ -24,17 +28,43 @@ API kopiowanie faktury
 ## 1 DB - Objects
 
 ### Tabele
-- [document].invoice
+- [document].invoice - nagłówek faktury
   - invoiceCategory - typ dokumentu
   - invoiceIssueDate - data wystawienia faktury
-- [document].invoiceline
+- [document].invoiceline - pozycje faktury
 
 ### Procedury
-- [erp].[invoice_InsertUpdate]
-- [erp].[invoice_get]
-- [erp].[invoiceLine_InsertUpdate]
-- [erp].[invoiceline_list]
+- [erp].[invoice_InsertUpdate] - dodanie / aktualizacja nagłówka
+- [erp].[invoice_get] - pobranie danych z faktury
+- [erp].[invoiceLine_InsertUpdate] - dodanie / akutalizacja pozycji faktury
+- [erp].[invoiceline_list] - lista pozycji faktury
 
+### Słowniki:
+#### Przykłady słowników
+	- Słownik magazynów (warehouse),
+	- Typy faktur (purchaseInvoiceTypes),
+	- Słownik walut (currency),
+	- Słownik jednostki miar (itemUnit),
+  - Słownik stawek podatku (taxrate),
+  - Słownik sposobów dostawy (termsofdelivery),
+  - Słownik wydziałów (organisationunit),
+  - Słownik sposobów płatności (paymenttype)
+	
+**Response**
+#### Procedura
+	- data.list  ( SQL PROCEDURE [erp].[dictionary_bynameValue])
+
+**Request**
+
+```http
+{host}/api/erp/dictionary/browse/{app_name}/{dictionary_name}
+```
+
+**Przykład użycia dla `Słownik magazynów (warehouse)`**
+
+```http
+GET {host}/api/erp/dictionary/browse/{app_name}/warehouse
+```
 
 ## 2. Ustawienia / zmienne / parametry
 
