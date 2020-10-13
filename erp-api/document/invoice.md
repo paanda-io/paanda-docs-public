@@ -20,6 +20,8 @@ required-app: platformaERP
 ## DB obiekty
 
 - [document].invoice
+  - invoiceCategory - typ dokumentu
+  - invoiceIssueDate - data wystawienia faktury
 - [document].invoiceline
 - [erp].[invoice_InsertUpdate]
 
