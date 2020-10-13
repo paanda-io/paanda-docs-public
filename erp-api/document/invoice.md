@@ -4,40 +4,50 @@ language: PL
 title: "API Faktura Zakupu / Sprzedaży"
 required-app: platformaERP
 ---
-
-
-# Faktura 
-
-- Faktura zakupu przykład / platformaERP https://master.platformacrm.pl/ERP/invoicePurchase/8c0c19b2-86f2-ea11-a98a-060c7c3ef0b7
-- komponent: v_invoice_purchase
-
 ## TODO
 
 - [ ] wystawianie faktury z kontekstu dokumentów
 - [ ] kopia faktury
 - [ ] usuniecie pozycji
 
-## DB obiekty
+# Faktura 
 
+## 1 DB - Objects
+
+### Tabele
 - [document].invoice
   - invoiceCategory - typ dokumentu
   - invoiceIssueDate - data wystawienia faktury
 - [document].invoiceline
+### Procedury
 - [erp].[invoice_InsertUpdate]
 
 
-## Parametry
+## 2. Ustawienia / zmienne / parametry
 
+### General
+
+- {app_name} moze byc zastapiony [[app_name]]
+
+### Parametry
 - `instance.sales.advanceindex` - Indeks zaliczkowy używany przy wystawianiu zaliczki z zamówienia sprzedażowego"
-- `instance.salesparts.advanceindex` - indeks zaliczkowy dl azamowienia sprzedazy czesci
+- `instance.salesparts.advanceindex` - indeks zaliczkowy dla zamowienia sprzedaży czesci
 - `instance.purchase.defaultPaymentType`  - (obsolete) Domyślna wartość sposobu płatności na fakturze zakupu
 
-## 2 API Pobranie dokumentu
+## 3 UI - User Interface
+
+- Faktura zakupu przykład / platformaERP https://master.platformacrm.pl/ERP/invoicePurchase/8c0c19b2-86f2-ea11-a98a-060c7c3ef0b7
+- komponent: v_invoice_purchase
+- [https://app.paanda.io/pages/erp/v-invoice-purchase] - interface faktury
+
+## 10 API - REST API
+
+## 10.1 API Pobranie faktury
 
 ***REQUEST***
 
 ```http
-GET {host}/api/erp/invoice/get/{app_name}/{document_id}
+GET {host}/api/erp/invoice/get/{app_name}/{invoice_id}
 ```
 
 ***RESPONSE***
