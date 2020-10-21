@@ -31,3 +31,5 @@ Markdown
 ```
 
 ***Response***
+
+Barcode 
