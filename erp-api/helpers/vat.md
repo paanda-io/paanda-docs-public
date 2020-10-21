@@ -17,7 +17,7 @@ VAT API sprawdza status polskiego kontrahenta w wykazie podmiotów zarejestrowan
         ))
 ```
 
-## Weryfikacja status pojedynczego podatnika i opcjonalnie konta bankowego JSON
+## 1.Weryfikacja status pojedynczego podatnika i opcjonalnie konta bankowego JSON
 
  "vat_status":"INVALID Bank Account" - nieprawidłowe konto
 
@@ -56,7 +56,7 @@ Authorization: Bearer {{token}}
 }
 ```
 
-## Weryfikacja status pojedynczego podatnika BADGE
+## 2.Weryfikacja status pojedynczego podatnika BADGE
 
 "vat_status":"INVALID Bank Account" - nieprawidłowe konto
 "vat_status":"Czynny" - OK
@@ -75,7 +75,7 @@ Authorization: Bearer {{token}}
 IMAGE
 
 
-## Aktualizacja statusu VAT dla platformaERP
+## 3.Aktualizacja statusu VAT dla platformaERP
 
 System weryfikuje status podatnika raz na 3 dni.
 
@@ -103,7 +103,7 @@ Badge with information
 ```
 
 
-### Pobieranie z rejestru REGON (nowy)
+### 4.Pobieranie z rejestru REGON (nowy)
 
 ***Request***
 
@@ -132,7 +132,7 @@ Badge with information
 }
 ```
 
-### Pobieranie z rejestru REGON ( wycofany, obsolete )
+### 5.Pobieranie z rejestru REGON ( wycofany, obsolete )
 
 >  Uwaga Wymagany dostęp do instancji master platformaerp 
 
