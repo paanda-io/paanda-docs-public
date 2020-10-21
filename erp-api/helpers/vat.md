@@ -60,16 +60,29 @@ Authorization: Bearer {{token}}
 
 ### 10.2 Weryfikacja status pojedynczego podatnika BADGE
 
-"vat_status":"INVALID Bank Account" - nieprawidłowe konto
-"vat_status":"Czynny" - OK
+- "vat_status":"INVALID Bank Account" - nieprawidłowe konto
+- "vat_status":"Czynny" - OK
+- Wymagany obiekt [dbo].[vat] w paanda.db
 
 ***Request***
 
-- Wymagany obiekt [dbo].[vat] w paanda.db
 
 ```http
 GET {{host}}/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}
 Authorization: Bearer {{token}}
+```
+
+lub HTML
+
+```html
+<img src="/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}" class="w3-image"  alt="STATUS VAT">
+```
+
+
+lub Markdown
+
+```md
+![STATUS VAT](/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}
 ```
 
 ***Response***
