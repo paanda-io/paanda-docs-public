@@ -103,21 +103,53 @@ Badge with information
 ```
 
 
-## Deprecated (Wycofane)
-
-### Pobieranie z rejestru REGON
+### Pobieranie z rejestru REGON (nowy)
 
 Wymagany dostęp do isntancji master platformaerp
 
 ***Request***
 
 ```http
-/api/regon/nip/{nip}
+/api/erp/vat/get-data-gus/{VAT}
 ```
 
 ***Response***
 
-JSON
+```
+{
+   "Regon":"XXXX",
+   "Nip":"XXXX",
+   "Nazwa":"XXXX",
+   "Wojewodztwo":"XXXX",
+   "Powiat":"XXXX",
+   "Gmina":"XXXX-XXXX",
+   "Miejscowosc":"XXXX",
+   "KodPocztowy":"00-000",
+   "Ulica":"ul. XXX XXXX",
+   "NrNieruchomosci":"111",
+   "NrLokalu":"",
+   "Typ":"F",
+   "SilosID":1,
+   "MiejscowoscPoczty":"XXXX"
+}
+```
 
+### Pobieranie z rejestru REGON (wycofany)
+
+
+***Request***
+
+```http
+/api/regon/nip/{vat}
+```
+
+```
+{"Name":"XXXXXXXx",
+"Regon":"XXXX",
+"Nip":"XXXX",
+"City":"XXX",
+"ZipCode":"00-000",
+"Street":"ul. XXXXX"}
+```
 
 
