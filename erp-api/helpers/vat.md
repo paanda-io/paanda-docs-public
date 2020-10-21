@@ -107,6 +107,8 @@ Badge with information
 
 ### Pobieranie z rejestru REGON
 
+Wymagany dostęp do isntancji master platformaerp
+
 ***Request***
 
 ```http
