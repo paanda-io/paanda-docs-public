@@ -2,7 +2,7 @@
 
 VAT API sprawdza status polskiego kontrahenta w wykazie podmiotów zarejestrowanych jako podatnicy VAT, niezarejestrowanych oraz wykreślonych i przywróconych do rejestru VAT, https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka#
 
-## Wymagane obiekty 
+## 1. DB Objects 
 
 ```sql
         CREATE TABLE [dbo].[vat] (
@@ -17,7 +17,9 @@ VAT API sprawdza status polskiego kontrahenta w wykazie podmiotów zarejestrowan
         ))
 ```
 
-## 1.Weryfikacja status pojedynczego podatnika i opcjonalnie konta bankowego JSON
+## 10 REST API
+
+### 10.1 Weryfikacja status pojedynczego podatnika i opcjonalnie konta bankowego JSON
 
  "vat_status":"INVALID Bank Account" - nieprawidłowe konto
 
@@ -56,7 +58,7 @@ Authorization: Bearer {{token}}
 }
 ```
 
-## 2.Weryfikacja status pojedynczego podatnika BADGE
+### 10.2 Weryfikacja status pojedynczego podatnika BADGE
 
 "vat_status":"INVALID Bank Account" - nieprawidłowe konto
 "vat_status":"Czynny" - OK
@@ -75,7 +77,7 @@ Authorization: Bearer {{token}}
 IMAGE
 
 
-## 3.Aktualizacja statusu VAT dla platformaERP
+### 10.3 Aktualizacja statusu VAT dla platformaERP
 
 System weryfikuje status podatnika raz na 3 dni.
 
@@ -103,7 +105,7 @@ Badge with information
 ```
 
 
-### 4.Pobieranie z rejestru REGON (nowy)
+### 10.4 Pobieranie z rejestru REGON (nowy)
 
 ***Request***
 
@@ -132,7 +134,7 @@ Badge with information
 }
 ```
 
-### 5.Pobieranie z rejestru REGON ( wycofany, obsolete )
+### 10.5 UWAGA wycofany, obsolete  / Pobieranie z rejestru REGON 
 
 >  Uwaga Wymagany dostęp do instancji master platformaerp 
 
