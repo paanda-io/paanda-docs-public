@@ -21,7 +21,7 @@ Authorization: Bearer {{token}}
 HTML
 
 ```html
-<img src="/api/erp/barcode?code={code}&label={label}" class="w3-image"  :alt="code">
+<img src="/api/erp/barcode?code={code}&label={label}" class="w3-image"  alt="Barcode">
 ```
 
 Markdown
