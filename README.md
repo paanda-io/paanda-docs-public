@@ -44,7 +44,7 @@ Paanda is built on three layer concept, every operation is available as rest API
   - [REST API UMOWY I PODPISY](/erp-api/document/agreement.md)
   - Zlecenie Produkcyjne
   - Zlecenie Serwisowe
-- [REST API ERP HELPERS QRCODE, BARCODE, VAT , GEOLOCATION](/erp-api/helpers)  
+- [ERP Helpers](/erp-api/helpers)  
   - [Currency Exchange](/erp-api/helpers/currencyexchange.md)
   - [Geolocation](/erp-api/helpers/geolocation.md)
   - [Barcode](/erp-api/helpers/barcode.md)
