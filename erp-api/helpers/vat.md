@@ -105,8 +105,6 @@ Badge with information
 
 ### Pobieranie z rejestru REGON (nowy)
 
-Wymagany dostęp do isntancji master platformaerp
-
 ***Request***
 
 ```http
@@ -134,8 +132,9 @@ Wymagany dostęp do isntancji master platformaerp
 }
 ```
 
-### Pobieranie z rejestru REGON (wycofany)
+### Pobieranie z rejestru REGON ( wycofany, obsolete )
 
+>  Uwaga Wymagany dostęp do instancji master platformaerp 
 
 ***Request***
 
