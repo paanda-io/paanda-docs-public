@@ -58,7 +58,7 @@ Authorization: Bearer {{token}}
 }
 ```
 
-### 10.2 Weryfikacja status pojedynczego podatnika BADGE
+### 10.2 Weryfikacja status pojedynczego podatnika  i opcjonalnie konta bankowego  BADGE
 
 - "vat_status":"INVALID Bank Account" - nieprawidłowe konto
 - "vat_status":"Czynny" - OK
