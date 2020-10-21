@@ -1,15 +1,33 @@
 # Barcode API
 
-## Summary
-
 Barcode API will generate Code128 Barcode
 
-## Example
+## 10 REST API
 
+### 10.01 GEt BARCODE
 
-```rest
-/api/erp/barcode?code={code}&label={label}
+- code - Valid EAN 128 CODE
+- label [true/false] , default true
+
+***Request***
+
+Http
+
+```http
+GET {{host}}/api/erp/barcode?code={code}&label={label}
+Authorization: Bearer {{token}}
 ```
 
-- code [string] - Valid EAN 128 CODE
-- label [true/false] - default true
+HTML
+
+```html
+<img src="/api/erp/barcode?code={code}&label={label}" class="w3-image"  :alt="code">
+```
+
+Markdown
+
+```md
+![Barcode](/api/erp/barcode?code={code}&label={label})
+```
+
+***Response***
