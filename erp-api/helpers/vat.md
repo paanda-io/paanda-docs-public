@@ -66,20 +66,20 @@ Authorization: Bearer {{token}}
 
 ***Request***
 
+Http
 
 ```http
 GET {{host}}/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}
 Authorization: Bearer {{token}}
 ```
 
-lub HTML
+HTML
 
 ```html
 <img src="/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}" class="w3-image"  alt="STATUS VAT">
 ```
 
-
-lub Markdown
+Markdown
 
 ```md
 ![STATUS VAT](/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}
