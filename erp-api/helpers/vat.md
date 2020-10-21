@@ -82,7 +82,7 @@ HTML
 Markdown
 
 ```md
-![STATUS VAT](/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?}
+![STATUS VAT](/api/erp/vat/get-badge/{VATNumber}/{AccountNumber?})
 ```
 
 ***Response***
