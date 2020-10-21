@@ -101,3 +101,21 @@ Badge with information
 ```html
 <img src="/api/erp/vat/check/platformaerp" title="VAT API Status"/>
 ```
+
+
+## Deprecated (Wycofane)
+
+### Pobieranie z rejestru REGON
+
+***Request***
+
+```http
+/api/regon/nip/{nip}
+```
+
+***Response***
+
+JSON
+
+
+
