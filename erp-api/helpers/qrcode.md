@@ -2,12 +2,33 @@
 
 ## Summary
 
-QRCode API will generate Qr Code
 
-## Example
+## 10 REST API
 
-```rest
-GET /api/erp/qrcode?code={code}
+### 10.01 GET QRCODE
+
+
+***Request***
+
+Http
+
+```http
+GET {host}/api/erp/qrcode?code={code}
+Authorization: Bearer {token}
 ```
 
-- code [string]
+HTML
+
+```html
+<img src="/api/erp/qrcode?code={code}" class="w3-image"  alt="QRCODE">
+```
+
+Markdown
+
+```md
+![QRCODE](/api/erp/qrcode?code={code})
+```
+
+***Response***
+
+QRCODE 
