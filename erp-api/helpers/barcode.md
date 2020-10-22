@@ -33,3 +33,27 @@ Markdown
 ***Response***
 
 Barcode 
+
+
+### 10.02  BARCODE
+
+***Request***
+
+
+```http
+POST {{host}}/api/erp/barcode-decoder
+Authorization: Bearer {{token}}
+```
+
+Request.Form.Files
+
+
+***Response***
+```
+
+{
+  "success": true,
+  "message": "2050802"
+}
+```
+
