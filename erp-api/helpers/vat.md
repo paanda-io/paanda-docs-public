@@ -28,7 +28,7 @@ VAT API sprawdza status polskiego kontrahenta w wykazie podmiotów zarejestrowan
 - Wymagany obiekt [dbo].[vat] w paanda.db
 
 ```http
-GET {{host}}/api/erp/vat/get-status/{VATNumber}/{AccountNumber?}
+GET {{host}}/api/erp/vat/get-data/{VATNumber}/{AccountNumber?}
 Authorization: Bearer {{token}}
 ```
 
