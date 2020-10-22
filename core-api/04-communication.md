@@ -10,14 +10,21 @@
 
 ## 2. SETTINGS
 
+Supported mail provider in order of importance
 
-- settings.system.mail_key  (mailgun key)
-  - settings.system.mail_from
-  - settings.system.mail_domain  (mailgun key)
+- Mailgun (settings.system)
+  - mail_key  (mailgun key)
+  - mail_domain  (mailgun key)
+- SMTP (settings.system)  
   - mail_smtp_server 
-  - mail_smtp_port
+  - mail_smtp_port - default 25
   - mail_smtp_username
   - mail_smtp_password
+  - mail_smtp_usessl - default true
+- Common mail
+  - mail_from  - email address
+  - mail_replyto - email address
+- `kv.v.owner.name` - from Name
 - `kv.sys.email.template` - mail template file, default: mail-template.md
   - path for templates: wwwroot\templates\
   - supported templates: (.md) MarkDown  , (.html) HTML Template
