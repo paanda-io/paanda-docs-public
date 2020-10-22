@@ -49,11 +49,20 @@ Request.Form.Files
 
 
 ***Response***
-```
 
+VALID
+```
 {
   "success": true,
   "message": "2050802"
+}
+```
+
+NOT VALID
+```
+{
+  "success": false,
+  "message": "Failed"
 }
 ```
 
