@@ -41,7 +41,7 @@ Barcode
 
 
 ```http
-POST {{host}}/api/erp/barcode-decoder
+POST {{host}}/api/erp/barcode-decode
 Authorization: Bearer {{token}}
 ```
 
