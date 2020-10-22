@@ -17,7 +17,7 @@
 - `kv.sys.email.template` - mail template file, default: mail-template.md
   - path for templates: wwwroot\templates\
   - supported templates: (.md) MarkDown  , (.html) HTML Template
-  - exacmple variables: [[kv.v.api.client]] [[username]] [[kv.v.owner.name]] [[comment_modified_by]] [[comment_text]] [[comment_url]]
+  - example variables: [[kv.v.api.client]] [[username]] [[kv.v.owner.name]] [[comment_modified_by]] [[comment_text]] [[comment_url]]
 - `kv.sys.email.subject` - mail subject, default:Notification  
 
 
