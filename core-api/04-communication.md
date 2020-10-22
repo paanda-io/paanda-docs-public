@@ -31,13 +31,29 @@
 
 ## 10 REST API
 
-### 10.1 POST
+### 10.1 TEST EMAIL SENDING
+
+Send single email
+
+
+***Request***
+
+```http
+POST {host}/api/mail/test
+```
+
+***Response***
+
+Email massage on authenticated user  mailbox
+
+
+### 10.2 POST
 
 ```http
 {host}/api/comments
 ```
 
-### 10.2 GET Comments (require sys_comments)
+### 10.3 GET Comments (require sys_comments)
 
 ```http
 {host}/api/comments/browse/{comment_remote_id}/{comment_remote_source?}
