@@ -8,6 +8,19 @@
 - [dbo].[comment_list] 
 - [dbo].[comment_set]
 
+## 2. SETTINGS
+
+
+- settings.system.mail_key
+  - settings.system.mail_from
+  - settings.system.mail_domain
+- `kv.sys.email.template` - mail template file, default: mail-template.md
+  - path for templates: wwwroot\templates\
+  - supported templates: (.md) MarkDown  , (.html) HTML Template
+  - exacmple variables: [[kv.v.api.client]] [[username]] [[kv.v.owner.name]] [[comment_modified_by]] [[comment_text]] [[comment_url]]
+- `kv.sys.email.subject` - mail subject, default:Notification  
+
+
 ## components
 
 - v_comment.js
