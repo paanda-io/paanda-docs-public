@@ -354,3 +354,7 @@ Sample target
 </div>
 
 ```
+## Example using v-if with get
+```
+<template v-if="get('table name','column name')"> Text </template>
+```
