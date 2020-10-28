@@ -127,8 +127,11 @@ SELECT 'Hello' + CHAR(13) + CHAR(10) + 'World'
 You can define hexadecimal color for row. Example colors https://htmlcolorcodes.com/color-chart/material-design-color-chart/
 If you want to match system color
 
-- <span style="background-color: #0074D9"> blue #0074D9</span>
+- blue #0074D9
 - red #FF4136
+- green #2ECC40
+- grey #9e9e9e
+- dark grey #616161
 
 
 
