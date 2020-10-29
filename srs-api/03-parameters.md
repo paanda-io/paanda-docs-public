@@ -11,7 +11,7 @@ Parameters section is optional.
 - `required` - optional true/false
 - `step` - useful for input type range
 - `srccommand` - when type="server-xml"  or type="server-xml"
-- `type` - optional (default text) parameter type (text,date)
+- `type` - optional, default **text** 
   - `server` - server side rendering useful for predefined values cannot be overwritten.
      Useful when want pass table as parameter  cannot be overwritten
   - `server-xml`  
