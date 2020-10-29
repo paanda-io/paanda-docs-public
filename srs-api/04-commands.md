@@ -11,6 +11,7 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
   - `connection="self"`  is a special kind of provider you can query different commands (from diferent connection) like databases
 - `label` - **optional** display label
 - `title` - **optional** title on hover
+- `color` -  **optional** color 
 - `type` - **optional**
   - empty  **(default)**  - render as a table at client
   - server - server side only used to compute properties, not returned
