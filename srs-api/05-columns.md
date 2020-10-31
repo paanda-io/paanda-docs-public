@@ -122,16 +122,27 @@ SELECT 'Hello' + CHAR(13) + CHAR(10) + 'World'
 
 ## Appendix , special column names
 
-###  if column.name = ROWCOLOR  important case 
+You can set color for text and background using special column names
 
-You can define hexadecimal color for row. Example colors https://htmlcolorcodes.com/color-chart/material-design-color-chart/
-If you want to match system color
+Example colors:
+
+- https://htmlcolorcodes.com/color-chart/material-design-color-chart/
+
+System colors:
 
 - blue #0074D9
 - red #FF4136
 - green #2ECC40
 - grey #9e9e9e
 - dark grey #616161
+
+
+###  `pa_background`  Hexadecimal color for background
+
+### `pa_color`  Hexadecimal color for text
+
+
+
 
 
 
