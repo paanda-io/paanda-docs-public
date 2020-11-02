@@ -1,4 +1,6 @@
-# Paanda - public documentation
+# paanda.io - public documentation
+
+https://paanda.io
 
 ## Basics
 
