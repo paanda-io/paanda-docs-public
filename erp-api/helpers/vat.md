@@ -99,10 +99,27 @@ System weryfikuje status podatnika raz na 3 dni.
 
 ***Request***
 
+
+Http
+
 ```http
-GET {{host}}/api/erp/vat/check/{app_name}
-Authorization: Bearer {{token}}
+GET {host}/api/erp/vat/check/{app_name}
+Authorization: Bearer {token}
 ```
+
+
+HTML
+
+```html
+<img src="/api/erp/vat/check/{app_name}" class="w3-image"  alt="STATUS VAT">
+```
+
+Markdown
+
+```md
+![STATUS VAT](/api/erp/vat/check/{app_name})
+```
+
 
 ***Request***
 
