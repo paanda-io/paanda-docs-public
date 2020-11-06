@@ -8,7 +8,7 @@
   - create/update/delete  apps 
   - create/delete connections
 - sys_administrator - User managment
-- srs_administrator - 
+- srs_administrator - Srs managment
 - sys_invite - invite new user with given roles except sys_administrator,app_administrator   role
 - sys_comments - communication data
 
