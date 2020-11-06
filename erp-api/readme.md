@@ -27,3 +27,8 @@ Obsługujemy:
 
 ## Roles
 
+- erp_files - dostęp do plików z repozytorium platformaerp
+- erp_order - zamówienia
+- erp_offers - oferty 
+- erp_parts_offer_create 
+- erp_parts_offer_accept 
