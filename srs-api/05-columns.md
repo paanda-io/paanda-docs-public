@@ -21,7 +21,8 @@ Optional XML element with column additional formatting
 - `desktop` [true], show/hide column
 - `mobile` [true] , visible in mobile
 - `title`, optional title for name
-- `url`, optional URL http://pandaa.io/item/{anycolumnname}/{anycolumnname} 
+- `url`, optional URL http://pandaa.io/item/{anycolumnname}/{anycolumnname} , 
+  - supported variebles `[[app_name]]` `[[kv.v.*]]`
 - `label`, optional
 - `name`, required
 - `required`, optional true/false 
