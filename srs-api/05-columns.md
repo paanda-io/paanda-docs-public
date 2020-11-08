@@ -51,8 +51,8 @@ List of custom types from database schema
 - `tinput_number`
 - `tinput_text`
 - `tinput_bool`
-- `tlink` -  internal link
-- `tlink_icon`  - internal link with icon font awesome 4 icon
+- `tlink` -  internal paanda client link
+- `tlink_icon`  - internal paanda client link with icon font awesome 4 icon
   - column.url - url 
   - column.css - font awesome 4 class  https://fontawesome.com/v4.7.0/icons/ example `fa fa-bar-chart`
 - `tlink_download`
