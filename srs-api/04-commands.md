@@ -19,6 +19,7 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
   - header - render  as header at client - only not empty values are rendered
   - single - render as vertical  list at client - only not empty values are rendered
   - form - render table as form as client
+  - kpi - render as KPI
 
 ## Hello World example
 
