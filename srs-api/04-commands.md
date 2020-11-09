@@ -14,12 +14,14 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
 - `color` -  **optional** color  example #00008B - Dark blue, select https://htmlcolorcodes.com/color-chart/material-design-color-chart/
 - `type` - **optional**
   - empty  **(default)**  - render as a table at client
-  - server - server side only used to compute properties, not returned
+  - *server* - server side only used to compute properties, not returned
   - hidden - hidden returned
   - header - render  as header at client - only not empty values are rendered
+  - footer - render  as footer 
   - single - render as vertical  list at client - only not empty values are rendered
   - form - render table as form as client
   - kpi - render as KPI
+  - srs_tiles - tiles 
 
 ## Hello World example
 
