@@ -16,7 +16,7 @@ Target section is optional.
 - Basic types
   - `get` (default with cache respect) Returns JSON
   - `post` (always new data ) Returns JSON
-  - `object` Returns JSON as object "DaTA NODE"
+  - `object` Returns JSON as object "DaTA NODE" `command.type=single` for object NOT array
   - `xlsx` Excel  returns application/octet-stream
   - `html` Tables printout friendly, only columns with  export=true by default or desktop=true 
   - `html-all-coll` All columns
