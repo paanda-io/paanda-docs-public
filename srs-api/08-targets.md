@@ -15,7 +15,7 @@ Target section is optional.
 
 - Basic types
   - `get` (default with cache respect) Returns JSON
-  - `post` (always new data ) Returns JSON
+  - `post` (always up to date ) Returns JSON
   - `object` Returns JSON as array of objects in `data` node 
     -  `command.type=single` will convert to object not array 
     -  `command.type=header` will convert to object not array 
