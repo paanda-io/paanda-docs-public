@@ -19,7 +19,7 @@ Target section is optional.
   - `object` Returns JSON as array of objects in `data` node , column names = lower case, table names = original case
     -  `command.type=single` will convert to object not array 
     -  `command.type=header` will convert to object not array 
-  - `object-ocase`, column names = original case, table names = original case
+  - `object-ocase`  Returns JSON as array of objects in `data` node , column names = original case, table names = original case
     -  `command.type=single` will convert to object not array 
     -  `command.type=header` will convert to object not array 
   - `xlsx` Excel  returns application/octet-stream
