@@ -60,6 +60,11 @@ application/PDF
 GET {host}/api/print/url?url={encoded url}&ptoken={optional token}
 ```
 
+url examples:
+
+- relative url=`/pages/erp/v-order?orderid=54e351f2-73e3-4b25-97e9-4c0ab2460333&app_name=erp-jbb`
+- absolute url=`{host}/pages/erp/v-order?orderid=54e351f2-73e3-4b25-97e9-4c0ab2460333&app_name=erp-jbb`
+
 **_Response_**
 
 application/PDF
