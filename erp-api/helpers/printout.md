@@ -48,6 +48,19 @@ Json
 GET {host}/api/erp/print/get/[[app_name]]/{printout_uuid}/{document token}
 ```
 
-**_Response structure_**
+**_Response_**
 
 application/PDF
+
+
+### 10.3 REnder to application/pdf client side
+
+**_Request_**
+```http
+GET {host}/api/print/url?url={encoded url}&ptoken={optional token}
+```
+
+**_Response_**
+
+application/PDF
+
