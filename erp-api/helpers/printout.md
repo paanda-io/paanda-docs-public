@@ -13,10 +13,10 @@ required-app: paanda, platformaERP
   - documenttype ex: RW,PZ,RWP,PW,ZW ...
   - action - url of action ex: `http://{host}:8081/jasperserver/rest_v2/reports/Reports/{path}/{printoutname}.pdf?paramId={id}&username=sys&REPORT_LOCALE=pl_PL&userLocale=pl_PL&db={db}&j_username=someusername&j_password=somepassword`
     - {db} 
-    - {usernma}
+    - {username}
     - {printoutname}
     - {id}
-    - any query string parameter
+    - {any query string parameter}
     
 
 ## 2 Settings/Variables
