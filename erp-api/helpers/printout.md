@@ -11,12 +11,13 @@ required-app: paanda, platformaERP
 - [configuration].[printout]
   - componentname ex: order,document,invoice ...
   - documenttype ex: RW,PZ,RWP,PW,ZW ...
+  - method GET/POST/REDIRECT
   - action - url of action ex: `http://{host}:8081/jasperserver/rest_v2/reports/Reports/{path}/{printoutname}.pdf?paramId={id}&username=sys&REPORT_LOCALE=pl_PL&userLocale=pl_PL&db={db}&j_username=someusername&j_password=somepassword`
     - {db} 
     - {username}
     - {printoutname}
     - {id}
-    - {any query string parameter}
+    - {any query string parameter will be replaced}
     
 
 ## 2 Settings/Variables
