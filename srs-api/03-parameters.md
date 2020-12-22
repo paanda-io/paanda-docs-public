@@ -12,7 +12,7 @@ Parameters section is optional.
 - `step` - useful for input type range
 - `srccommand` - when type="server-xml"  or type="server-xml"
 - `type` - optional, default **text** 
-  - `server` - server side rendering useful for predefined values cannot be overwritten.
+  - `server` - server side parameter useful for predefined values cannot be overwritten.
      Useful when want pass table as parameter  cannot be overwritten
   - `server-xml`  
   - `integer` - integer
@@ -24,11 +24,13 @@ Parameters section is optional.
 
 
 
-### Parameter 
+### Parameters
 
-- Processing order is important in context of security
-First found parameter cannot be override.
-For example  ***type="server"*** cannot be overwritten by parameter provided by client
+Processing order 
+
+1. Server side parameters ( cannot be override)
+2. Query String
+3. Supplied Parameters
 
 - SQL injections Using parameters is safe  and recommended.
 To better understand what is SQL injection and why we do not allow processing commands read
@@ -37,12 +39,6 @@ https://owasp.org/www-community/attacks/SQL_Injection
 ``` xml
  <param name="username" type="server">[[kv.v.user.username]]</param>
 ```
-
-## Client
-
-1. Server side parameters
-2. Query String
-3. Supplied Parameters
 
 ## Server Side Variables
 
