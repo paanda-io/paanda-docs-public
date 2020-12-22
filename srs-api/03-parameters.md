@@ -23,6 +23,43 @@ Parameters section is optional.
   text, number, password, hidden, color, date, checkbox ...
 
 
+
+### Parameter 
+
+- Processing order is important in context of security
+First found parameter cannot be override.
+For example  ***type="server"*** cannot be overwritten by parameter provided by client
+
+- SQL injections Using parameters is safe  and recommended.
+To better understand what is SQL injection and why we do not allow processing commands read
+https://owasp.org/www-community/attacks/SQL_Injection
+
+``` xml
+ <param name="username" type="server">[[kv.v.user.username]]</param>
+```
+
+## Client
+
+1. Server side parameters
+2. Query String
+3. Supplied Parameters
+
+## Server Side Variables
+
+There are few predefined variables available.
+
+Built in variables marked in double brackets  `[[kv.v.variable1]]`
+
+- `[[kv.v.owner.name]]` Owner Name, also in footer
+- `[[kv.v.owner.contact]]` Owner contact, also in footer
+- `[[kv.v.owner.footer]]` Footer additional text
+- `[[kv.v.owner.language]]` Default language
+- `[[kv.v.user.username]]` - username
+- `[[kv.v.user.id]]` user id
+- `[[kv.v.user.roles]]` Roles in brackets [role1] [role2] [role3]
+
+
+
 ### Examples `type="select"` 
 
 ```xml
@@ -193,9 +230,6 @@ FROM @account.nodes('data/table/rows/i') as x(Rec)
 
 
 
-
-
-
 ### Basic example
 
 ``` xml
@@ -224,44 +258,5 @@ FROM @account.nodes('data/table/rows/i') as x(Rec)
   
 </SRS>
 ```
-
-
-## Security
-
-### SQL injections
-
-Using parameters is safe  and recommended.
-To better understand what is SQL injection and why we do not allow processing commands read
-https://owasp.org/www-community/attacks/SQL_Injection
-
-### Parameters processing order
-
-Processing order is important in context of security
-First found parameter cannot be override.
-For example  ***type="server"*** cannot be overwritten by parameter provided by client
-
-``` xml
- <param name="username" type="server">[[kv.v.user.username]]</param>
-```
-
-## Client
-
-1. Server side parameters
-2. Query String
-3. Supplied Parameters
-
-## Server Side Variables
-
-There are few predefined variables available.
-
-Built in variables marked in double brackets  `[[kv.v.variable1]]`
-
-- `[[kv.v.owner.name]]` Owner Name, also in footer
-- `[[kv.v.owner.contact]]` Owner contact, also in footer
-- `[[kv.v.owner.footer]]` Footer additional text
-- `[[kv.v.owner.language]]` Default language
-- `[[kv.v.user.username]]`
-- `[[kv.v.user.teams]]` Teams
-- `[[kv.v.user.roles]]` Roles
 
 
