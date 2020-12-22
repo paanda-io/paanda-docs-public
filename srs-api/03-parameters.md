@@ -55,7 +55,7 @@ Built in variables marked in double brackets  `[[kv.v.variable1]]`
 - `[[kv.v.owner.footer]]` Footer additional text
 - `[[kv.v.owner.language]]` Default language
 - `[[kv.v.user.username]]` - username
-- `[[kv.v.user.id]]` user id
+- `[[kv.v.user.userid]]` user id
 - `[[kv.v.user.roles]]` Roles in brackets [role1] [role2] [role3]
 
 
