@@ -4,7 +4,7 @@
 
 All parameters that will match stored procedure parameters name will be sent
 
-```sql
+```xml
 <SRS>
 <title>API task POST</title>
 <commands> 
@@ -23,7 +23,7 @@ If any parameter in parameters node then
 - only parameters defined in parameters node are sent
 - you can pass server side values see srs/parameters ***<param name="task_modified_by" type="server">[[kv.v.user.username]]</param>***
 
-```sql
+```xml
 
  <SRS>
   <title>API task POST</title>
