@@ -6,6 +6,8 @@ SRS is an core Paanda module  which extract transform and load data from various
 
 - SRS definition is a xml file, stored in local filesystem or git repository,  format comes with sensible defaults to get up and running quickly and once you move towards a more advanced setup can be done.
 - SRS can be executed using REST API or  Paanda UI,   and produce output for example JSON/HTML/PDF/Excel 
+- SRS are grouped in applications
+- SRS can inherit canfiguration from `global.xml` file
 
 ## "Hello world" example
  
