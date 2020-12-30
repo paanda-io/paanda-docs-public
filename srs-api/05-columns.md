@@ -28,7 +28,7 @@ Optional XML element with column additional formatting
 - `required`, optional true/false 
 - `type` , additional formatting
 - `permission`, optional column level permission
-- 🆕 `css`  - custom style for element, Example `background-color:red`
+- `css`  - custom style for element, Example `background-color:red`
 
 ## Column `type`
 
@@ -47,28 +47,27 @@ List of autodiscover types from database schema
 
 List of custom types from database schema
 
-- `tcolor_progress`
-- `tinput_number`
-- `tinput_text`
-- `tinput_bool`
+- `tinput_number` - input number
+- `tinput_text`  - text number
+- `tinput_bool`  - checkbox number
 - `tlink` -  internal paanda client link
+  - column.url - url 
 - `tlink_icon`  - internal paanda client link with icon font awesome 4 icon
   - column.url - url 
   - column.css - font awesome 4 class  https://fontawesome.com/v4.7.0/icons/ example `fa fa-bar-chart`
 - `tlink_download`
 - `tcomputed` , example : {column1} * {column2} /2 ,  getComputed(column.url,row,table.columns)
-- `turl_blank` - external linking
-- `turl_download` 
+- `turl_blank` - external link
+- `turl_download`  - external link dediacted for files download
 - `turl_post`
-- `turl_tag`
+- `tcolor_progress`
 - `turl_progress`
-- `tformat_bytes` , old: fileSize,  (Human readable size input bytes)
-- `ttag` 
+- `tformat_bytes` - Human readable size input bytes
+- `turl_tag` - build tag list with color based on text
+- `ttag` - build tag list with color based on text
 - `tmarkdown`, renders markdown server side
 - `tstring_multi` -- multiline Text with Line breaks similar to HTML `pre` tag
 - `timg` - image token from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`
-- **[obsolete use timg]** `timgcircle` - rounded image from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`
-- 🆕 `timg` - see timg examples section
 
 
 ####  Examples:  `timg` 
