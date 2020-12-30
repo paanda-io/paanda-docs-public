@@ -42,15 +42,20 @@ List of autodiscover types from database schema
 - `tinteger`  example 2 (Number)  / column.css - style attribute 
 - `tdecimal` , example 2.02  (Decimal)  / column.css - style attribute 
 - `tstring`
+  - column.css - style attribute 
 
 ### Custom
 
 List of custom types from database schema
 
-- `tinput_number` - input number / column.css - style attribute 
+- `tinput_number` - input number
+  - column.css - style attribute 
 - `tinput_text`  - text number
-- `tinput_bool`  - checkbox number / column.css - style attribute 
-- `tlink` -  internal paanda client link  / column.css - style attribute 
+  - column.css - style attribute 
+- `tinput_bool`  - checkbox number 
+  - column.css - style attribute 
+- `tlink` -  internal paanda client link  
+  - column.css - style attribute 
   - column.url - url 
 - `tlink_icon`  - internal paanda client link with icon font awesome 4 icon
   - column.url - url 
@@ -58,7 +63,9 @@ List of custom types from database schema
 - `tlink_download` - dediacted for files download
 - `tcomputed` , example : {column1} * {column2} /2 ,  getComputed(column.url,row,table.columns)
 - `turl_blank` - external link
-- `turl_post`
+- `turl_post` - send standard javascript object to url
+  - column.url - url 
+  - column.css - style attribute 
 - `tcolor_progress`
 - `turl_progress`
 - `tformat_bytes` - Human readable size input bytes
@@ -67,6 +74,7 @@ List of custom types from database schema
 - `tmarkdown`, renders markdown server side
 - `tstring_multi` -- multiline Text with Line breaks similar to HTML `pre` tag
 - `timg` - image token from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`  / column.css - style attribute 
+  - column.url - url 
 
 
 ####  Examples:  `timg` 
