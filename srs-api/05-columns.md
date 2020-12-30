@@ -37,28 +37,27 @@ Optional XML element with column additional formatting
 List of autodiscover types from database schema
 
 - `tguid` 
-- `tdate` (Date)
-- `tbool`  (Bool)
-- `tinteger`  example 2 (Number)
-- `tdecimal` , example 2.02  (Decimal)
+- `tdate` - Date / column.css - style attribute 
+- `tbool` - Bool / column.css - style attribute 
+- `tinteger`  example 2 (Number)  / column.css - style attribute 
+- `tdecimal` , example 2.02  (Decimal)  / column.css - style attribute 
 - `tstring`
 
 ### Custom
 
 List of custom types from database schema
 
-- `tinput_number` - input number
+- `tinput_number` - input number / column.css - style attribute 
 - `tinput_text`  - text number
-- `tinput_bool`  - checkbox number
-- `tlink` -  internal paanda client link
+- `tinput_bool`  - checkbox number / column.css - style attribute 
+- `tlink` -  internal paanda client link  / column.css - style attribute 
   - column.url - url 
 - `tlink_icon`  - internal paanda client link with icon font awesome 4 icon
   - column.url - url 
   - column.css - font awesome 4 class  https://fontawesome.com/v4.7.0/icons/ example `fa fa-bar-chart`
-- `tlink_download`
+- `tlink_download` - dediacted for files download
 - `tcomputed` , example : {column1} * {column2} /2 ,  getComputed(column.url,row,table.columns)
 - `turl_blank` - external link
-- `turl_download`  - external link dediacted for files download
 - `turl_post`
 - `tcolor_progress`
 - `turl_progress`
@@ -67,7 +66,7 @@ List of custom types from database schema
 - `ttag` - build tag list with color based on text
 - `tmarkdown`, renders markdown server side
 - `tstring_multi` -- multiline Text with Line breaks similar to HTML `pre` tag
-- `timg` - image token from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`
+- `timg` - image token from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`  / column.css - style attribute 
 
 
 ####  Examples:  `timg` 
