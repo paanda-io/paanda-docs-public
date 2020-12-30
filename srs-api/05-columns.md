@@ -69,7 +69,7 @@ List of custom types from database schema
 - `tcolor_progress`
 - `turl_progress`
 - `tformat_bytes` - Human readable size input bytes
-- `turl_tag` - build tag list with color based on text
+- `tlink_tag` `turl_tag` - build tag list with color based on text
 - `ttag` - build tag list with color based on text
 - `tmarkdown`, renders markdown server side
 - `tstring_multi` -- multiline Text with Line breaks similar to HTML `pre` tag
