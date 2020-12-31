@@ -54,22 +54,22 @@ List of custom types from database schema
   - column.css - style attribute 
 - `tinput_bool`  - checkbox number 
   - column.css - style attribute 
-- `tlink` -  internal paanda client link  
+- `tlink` -  link
   - column.css - style attribute 
   - column.url - url 
+- `tlink_tag`  - build tag link with color based on text
 - `tlink_icon`  - internal paanda client link with icon font awesome 4 icon
   - column.url - url 
   - column.css - font awesome 4 class  https://fontawesome.com/v4.7.0/icons/ example `fa fa-bar-chart`
-- `tlink_download` - dediacted for files download
+- `tlink_download` - dedicated for files download
 - `tcomputed` , example : {column1} * {column2} /2 ,  getComputed(column.url,row,table.columns)
-- `turl_blank` - external link
+- `turl_blank` - external link in new window
 - `turl_post` - send standard javascript object to url
   - column.url - url 
   - column.css - style attribute 
 - `tcolor_progress`
 - `turl_progress`
 - `tformat_bytes` - Human readable size input bytes
-- `tlink_tag` `turl_tag` - build tag list with color based on text
 - `ttag` - build tag list with color based on text
 - `tmarkdown`, renders markdown server side
 - `tstring_multi` -- multiline Text with Line breaks similar to HTML `pre` tag
