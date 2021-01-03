@@ -17,11 +17,11 @@ Target section is optional.
   - `get` (default with cache respect) Returns JSON
   - `post` (always up to date ) Returns JSON
   - `object` Returns JSON as array of objects in `data` node , column names = lower case, table names = original case
-    -  `command.type=single` will convert to object not array 
-    -  `command.type=header` will convert to object not array 
+    -  `command.type=single` , `command.type=header` result in object 
   - `object-ocase`  Returns JSON as array of objects in `data` node , column names = original case, table names = original case
-    -  `command.type=single` will convert to object not array 
-    -  `command.type=header` will convert to object not array 
+    -  `command.type=single` , `command.type=header` result in object 
+   - `object-command`  Returns single command json , column names = original case, table names = original case
+    -  `command.type=single` , `command.type=header` result in object 
   - `xlsx` Excel  returns application/octet-stream
   - `html` Tables printout friendly, only columns with  export=true by default or desktop=true 
   - `html-all-coll` All columns
