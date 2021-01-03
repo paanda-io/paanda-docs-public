@@ -5,12 +5,12 @@ SRS file format processor transform Paanda file definition to data operations.
 ## Quickstart REST API
 
 ```http
-GET {host}/api/srs/{app_name}/{srs_name}/{renderer}?ptype={ptype}
+GET {host}/api/srs/{app_name}/{srs_name}/{command.name}?ptype={ptype}
 Authorization: Bearer {{token}}
 ```
 
 ```http
-POST {host}/api/srs/{app_name}/{srs_name}/{renderer}?ptype={ptype}
+POST {host}/api/srs/{app_name}/{srs_name}/{{command.name}?ptype={ptype}
 Authorization: Bearer {{token}}
 {
     "param1": "value1",
@@ -25,10 +25,9 @@ Authorization: Bearer {{token}}
 - `app_name` **REQUIRED** application context 
 - `srs_name` **REQUIRED** SRS definition name 
 - `pformat`  **OPTIONAL** pretty print (warning response type plain/Text) only for preview
-- `ptype`  **OPTIONAL** type of expeceted response (default JSON)  [see target:type](/srs-api/08-targets.md#target-type)
-- `renderer`  **OPTIONAL** renderer
+- `ptype`  **OPTIONAL** type of rendered  [see target:type](/srs-api/08-targets.md#target-type)
+- `command.name`  **OPTIONAL** preferred command or string (if any srs is executed)
 - `querystring` **OPTIONAL** all query strings value are passed to processor
-- `renderer`  **OPTIONAL** if  contains ANY string SRS is executed against data sources
 
 
 ## Examples
