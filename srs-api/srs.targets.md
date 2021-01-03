@@ -1,16 +1,27 @@
-# SRS/targets
+# srs.targets
 
-Target section is optional.
+- Target section is optional.
+- When NOT specified all targets are available
+- When specified only targets specified in `srs.targets node are available`
 
-## Attributes
+## xml node srs.targets.target attributes
 
 - `type` 
 - `renderer` (optional template name)
-- `label` - optional label
-- `title` - optional title
+- `label` - optional, label
+- `title` - optional, title
+- `permission` - optional, limit target to user with permission
 
-## Target `type`
+~~~ xml
+<SRS>
+  <!-- .... removed for clarity-->
+  <targets>
+        <target  type="ptype" label="PDF" renderer="order-confirmation-print"></target>
+  </targets>
+</SRS>
+~~~
 
+## Target `ptype`
 
 
 - Basic types
@@ -20,7 +31,7 @@ Target section is optional.
     -  `command.type=single` , `command.type=header` result in object 
   - `object-ocase`  Returns JSON as array of objects in `data` node , column names = original case, table names = original case
     -  `command.type=single` , `command.type=header` result in object 
-   - `object-command`  Returns single command json , column names = original case, table names = original case
+   - `object-command`  Returns single command json match renderer, column names = original case, table names = original case
     -  `command.type=single` , `command.type=header` result in object 
   - `xlsx` Excel  returns application/octet-stream
   - `html` Tables printout friendly, only columns with  export=true by default or desktop=true 
@@ -39,21 +50,4 @@ Target section is optional.
   - `htmltemplate`   Renders html file, renderer of `app\[renderer].html` template
 
 
-## Example
-
-~~~ xml
-<SRS>
-  <!-- .... removed for clarity-->
-  <targets>
-        <target  type="pdf" label="PDF" renderer="order-confirmation-print"></target>
-        <target  type="pdfmd" label="PDF" renderer="order-confirmation-print"></target>
-        <target  type="xlsx" label="xlsx"></target>
-        <target  type="html" label="html" renderer="order-confirmation-print"></target>
-        <target  type="htmlmd" label="html" renderer="order-confirmation-print"></target>
-        <target  type="txt" label="txt" renderer="order-confirmation-print"></target>
-        <target  type="post"></target>
-        <target  type="get"></target>
-  </targets>
-</SRS>
-~~~
 
