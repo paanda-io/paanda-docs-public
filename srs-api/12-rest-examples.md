@@ -25,8 +25,8 @@ Authorization: Bearer {{token}}
 - `app_name` **REQUIRED** application context 
 - `srs_name` **REQUIRED** SRS definition name 
 - `pformat`  **OPTIONAL** pretty print (warning response type plain/Text) only for preview
-- `ptype`  **OPTIONAL** type of rendered  [see target:type](/srs-api/08-targets.md#target-type)
-- `command.name`  **OPTIONAL** preferred command.name or target.renderer
+- `ptype`  **OPTIONAL** type of rendered  [see target.type](/srs-api/08-targets.md#target-type)
+- `command.name`  **OPTIONAL** preferred command.name or [see target.renderer](/srs-api/08-targets.md#target-renderer)
 - `querystring` **OPTIONAL** all query strings value are passed to processor
 
 
