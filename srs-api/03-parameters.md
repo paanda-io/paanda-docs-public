@@ -186,14 +186,14 @@ FROM @account.nodes('data/table/rows/i') as x(Rec)
 <parameters>
 	<param name="BillingAddress"></param>
 	<param name="BillingCountry"></param>
-     <param name="date_from" type="date"  srccommand="defaults"></param>
-    <param name="date_to" type="date" srccommand="defaults"></param>
+     <param name="date_from" type="date"  srccommand="parameters"></param>
+    <param name="date_to" type="date" srccommand="parameters"></param>
     
 </parameters>
 
 <commands>
-	
-	<command name="defaults" type="server" >
+	<!-- Important command.name must be parameters -->
+	<command name="parameters" type="server" >
 	select 
 	convert(varchar,DATEADD(month, DATEDIFF(month, 180, getdate()), 0), 23)  date_from,
 	convert(varchar,EOMONTH(getdate()) , 23)  date_to
