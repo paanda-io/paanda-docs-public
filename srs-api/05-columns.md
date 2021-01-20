@@ -77,7 +77,7 @@ List of custom types from database schema
 - `timg` - image token from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`  / column.css - style attribute 
   - column.url - url 
 
-
+	
 ####  Examples:  `timg` 
 
 get file from files 
@@ -101,6 +101,11 @@ Supported type =  Code128 , ean13, Code93
 <column name="qr" type="timg" label="Order code" css="width:100px" url="/api/system/barcode?code={qr}&type=code128" />
 ```
 
+get avatar
+
+```xml
+<column name="mail_to_avatar"  label="To" type="timg" mobile="false"	url="/account/avatar/{mail_to_avatar}"  />
+```
   
 ### Examples:  `turl_blank`  - external linking
 
