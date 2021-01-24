@@ -19,10 +19,11 @@ Parameters section is optional.
   - `hidden` - hidden (useful for client side dictionaries, helpers)
   - `select` - dropdown type, see section
   - `autocomplete`  (must contains key value)
-  - all input types defined by HTML 5 spec. https://www.w3schools.com/tags/att_input_type.asp for example
+  - `number` - all input types defined by HTML 5 spec. https://www.w3schools.com/tags/att_input_type.asp for example
   text, number, password, hidden, color, date, checkbox ...
 
-
+*Important note
+It's important to use proper dataformat if you are performing operations in sql 
 
 ### Parameters
 
