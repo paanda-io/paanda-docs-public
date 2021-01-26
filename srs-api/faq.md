@@ -32,10 +32,10 @@ Youn need to cast GUID to varchar if you want to query command see example
 ```
 
 
-## Query command (connection = "self" and MS SQL SERVER Guid)
+## Query command and numbers
 
 
 
-## Query command basic replacement
+## Query command basic functions replacement
 
 - https://sqlite.org/lang_corefunc.html
