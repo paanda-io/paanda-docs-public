@@ -1,0 +1,41 @@
+# FAQ
+
+## connection = "self" and MS SQL SERVER Guid
+
+Youn need to cast GUID to varchar if you want to query command see example
+
+```
+<SRS>
+<commands>
+  <command name="example">
+
+  select 
+    cast('1D504B35-2CC5-4079-B954-871D2B8BB56F' as uniqueidentifier) uniqueidentifier_test1,
+    cast('6D504B35-2CC5-4079-B954-871D2B8BB56F' as varchar(36)) uniqueidentifier_test2
+
+  </command>
+
+  <command name="test1" connection="self">
+  --FAIL RETURN 0 ROWS
+  select * from example 
+  where  uniqueidentifier_test1 = '1D504B35-2CC5-4079-B954-871D2B8BB56F' 
+  </command>
+
+  <command  name="test2" connection="self">
+  --OK  RETURN 1 ROW
+  select * from example 
+  where  uniqueidentifier_test1 = '6D504B35-2CC5-4079-B954-871D2B8BB56F' 
+  </command>
+
+</commands>
+</SRS>
+```
+
+
+## Query command (connection = "self" and MS SQL SERVER Guid)
+
+
+
+## Query command basic replacement
+
+- https://sqlite.org/lang_corefunc.html
