@@ -72,11 +72,17 @@ Parameters:
 - Server (optional) remote server
 - User(optional)  remote server
 - Password (optional)  remote server
-- hasHeader (optional)  true/false
+- Header (optional)  true/false
 
 ``` xml
-<connections>
-    <connection name="dropbox" type="excel">Path="\test.xlsx";</connection>
-    <connection name="dropbox" type="excel">Server="test";Path="\test.xlsx";</connection>
-</connections>
+<SRS>
+	<title>Price list</title>
+	<connections>
+		<connection name="excel" type="MsExcel">Path="pricelist.xlsx";Header=True</connection>
+	</connections>
+	<commands>
+		<command name="dropbox" connection="excel">
+		</command>
+	</commands>
+</SRS>
 ```
