@@ -10,13 +10,14 @@ Parameters section is optional.
 - `command` - optional command - parameter will be applied only to matching command (comma separated values available)
 - `required` - optional true/false
 - `step` - useful for input type range
+- `srccommand` - if not empty command is always executed  `!Always executed`
 - `type` - optional, default **text** 
   - `server` - server side parameter useful for predefined values cannot be overwritten.
      Useful when want pass table as parameter  cannot be overwritten
-  - `server-xml`  xml  from command require `srccommand = "command.name"` 
+  - `server-xml`  xml  from command require `srccommand = "command.name"`  `!Always executed`
   - `integer` - integer
   - `hidden` - hidden (useful for client side dictionaries, helpers)
-  - `select` - dropdown type, see section
+  - `select` - dropdown type, see section 
   - `autocomplete`  (must contains key value)
   - `number` - all input types defined by HTML 5 spec. https://www.w3schools.com/tags/att_input_type.asp for example
   text, number, password, hidden, color, date, checkbox ...
@@ -63,7 +64,7 @@ Built in variables marked in double brackets  `[[kv.v.variable1]]`
   <title>Select Example</title>
 
   <parameters>
-    <param name="leadUserID" type="select"></param>
+    <param name="leadUserID" type="select" srccommand="leadUserID"></param>
   </parameters>
 
 
