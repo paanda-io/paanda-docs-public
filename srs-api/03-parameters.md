@@ -17,8 +17,8 @@ Parameters section is optional.
   - `server-xml`  xml  from command require `srccommand = "command.name"`  `!Always executed`
   - `integer` - integer
   - `hidden` - hidden (useful for client side dictionaries, helpers)
-  - `select` - dropdown type, see section 
-  - `autocomplete`  (must contains key value)
+  - `select` - dropdown type, see section  require `srccommand = "command.name"`  `!Always executed`
+  - `autocomplete`  (must contains key value) 
   - `number` - all input types defined by HTML 5 spec. https://www.w3schools.com/tags/att_input_type.asp for example
   text, number, password, hidden, color, date, checkbox ...
 
