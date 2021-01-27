@@ -11,7 +11,7 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
   - `connection="self"`  is a special kind of provider you can query different commands (from diferent connection) like databases
 - `label` - **optional** display label
 - `title` - **optional** title on hover
-- `permission` - **optional** paanda roles separated by `,`
+- `permission` - **optional**  command available for any role specified, roles separated by `,` 
 - `color` -  **optional** color  example #00008B - Dark blue, select https://htmlcolorcodes.com/color-chart/material-design-color-chart/
 - `type` - **optional**
   - empty  **(default)**  - render as a table at client
