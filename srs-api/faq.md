@@ -1,6 +1,6 @@
 # FAQ
 
-## connection = "self" and MS SQL SERVER Guid
+## connection = "self" and MS SQL SERVER Guid (Fixed from v.1453)
 
 Youn need to cast GUID to varchar if you want to query command see example
 
