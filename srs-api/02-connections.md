@@ -19,7 +19,7 @@ Connections stored in connection manager are secured and are not stored in plain
 - `mssql` Microsoft SQL Server, Azure SQL DB, Amazon RDS
 - `self` Virtual connection to command result
 - `file_system` Local/Remote File System  (DATA CENTER AND	SERVER VERSIONS ONLY)
-- `excel` EXCEL ( `.xlsx` ) files as a database   (DATA CENTER AND	SERVER VERSIONS ONLY)
+- `MsExcel` EXCEL ( `.xlsx` ) files as a database   (DATA CENTER AND	SERVER VERSIONS ONLY)
 - `postgresql` PostgreSQL    (DATA CENTER AND	SERVER VERSIONS ONLY)
 - `oracle` Oracle   (DATA CENTER AND	SERVER VERSIONS ONLY)
 
