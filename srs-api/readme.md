@@ -9,10 +9,19 @@ SRS is an core Paanda module  which extract transform and load data from various
 - SRS are grouped in applications
 - SRS can inherit canfiguration from `global.xml` file
 
+
+## Data
+
+- `srs.permission` - command available for any role specified, roles separated by `,` 
+  - `permission` - if equals `anonymous` available for not authenticated user
+  
+
+
 ## "Hello world" example
  
+ 
 ``` xml
-<SRS>
+<srs>
     <title>Hello World</title>
     <description>Markdown Support</description>
     <permission>VIP</permission>
@@ -31,7 +40,7 @@ SRS is an core Paanda module  which extract transform and load data from various
     <columns><!--see SRS/columns documentation on sidebar--></columns>
     <options><!--see SRS/options documentation on sidebar--></options>
     <targets><!--see SRS/targets documentation on sidebar--></targets>
-</SRS>
+</srs>
 
 ```
 
