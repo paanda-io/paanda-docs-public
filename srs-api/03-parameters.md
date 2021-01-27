@@ -7,14 +7,13 @@ Parameters section is optional.
 - `name` (required) - parameter name
 - `label` - parameter label
 - `description` - short description
-- `command` - optional command - parameter will be applied only to matching command (comma separated values)
+- `command` - optional command - parameter will be applied only to matching command (comma separated values available)
 - `required` - optional true/false
 - `step` - useful for input type range
-- `srccommand` - when type="server-xml"  or type="server-xml"
 - `type` - optional, default **text** 
   - `server` - server side parameter useful for predefined values cannot be overwritten.
      Useful when want pass table as parameter  cannot be overwritten
-  - `server-xml`  
+  - `server-xml`  xml  from command require `srccommand = "command.name"` 
   - `integer` - integer
   - `hidden` - hidden (useful for client side dictionaries, helpers)
   - `select` - dropdown type, see section
