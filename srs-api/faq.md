@@ -35,28 +35,30 @@ Youn need to cast GUID to varchar if you want to query command see example
 ### Example 1: FAIL
 ```
 <SRS>
-<parameters>
-<param name="A"  label="A:">30</param>
-</parameters>
-<commands>
-<command name="example">
-select getdate()+@A
-</command>
-</commands>
+  <parameters>
+    <param name="A"  label="A:">30</param>
+  </parameters>
+  
+  <commands>
+    <command name="example">
+      select getdate()+@A
+    </command>
+  </commands>
 </SRS>
 ```
 
 ### Example 2: OK
 ```
 <SRS>
-<parameters>
-<param name="A" type="number" label="A:">30</param>
-</parameters>
-<commands>
-<command name="example">
-select getdate()+@A
-</command>
-</commands>
+  <parameters>
+    <param name="A" type="number" label="A:">30</param>
+  </parameters>
+  
+  <commands>
+    <command name="example">
+      select getdate()+@A
+    </command>
+   </commands>
 </SRS>
 ```
 
