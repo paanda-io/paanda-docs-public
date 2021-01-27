@@ -24,9 +24,9 @@ Options section is optional
 ``` xml
 <options>
 	<option  css="w3-red" label="Remove Selected" command="documenttypes"  type="pa_post" url="/api/config/delete" />
-	<option label="Create account" cssclass="w3-green"   type="pa_elink" url="/#/crm/account" />
-	<option label="Create account" cssclass="w3-green"   type="pa_post" url="action:select" />
-	<option label="Create account" cssclass="w3-green"   type="pa_post" url="action:unselect" />
+	<option label="Create account" css="w3-green"   type="pa_elink" url="/crm/account" />
+	<option label="Create account" css="w3-green"   type="pa_post" url="action:select" />
+	<option label="Create account" css="w3-green"   type="pa_post" url="action:unselect" />
 </options>
 ```
 
