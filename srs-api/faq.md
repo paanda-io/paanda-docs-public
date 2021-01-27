@@ -31,8 +31,52 @@ Youn need to cast GUID to varchar if you want to query command see example
 </SRS>
 ```
 
-## Parameter conversion error in math operation with date
-### Example 1: FAIL
+### Incorrect sum
+#### Example 1: FAIL
+```
+<SRS>
+  <commands>
+    <command name="numbers" >
+     select 1.1 num
+     union
+     select 2.1 num
+     union 
+     select 3.1 num
+    </command>
+   
+    <command name="example" connection="self">
+     select sum(num) from numbers
+    </command>
+  </commands>
+</SRS>
+```
+Sum return: 6.300000000000001
+
+To solve this problem you need to use round ()
+
+#### Example 2: OK
+```
+<SRS>
+  <commands>
+    <command name="numbers" >
+     select 1.1 num
+     union
+     select 2.1 num
+     union 
+     select 3.1 num
+    </command>
+   
+    <command name="example" connection="self">
+     select round(sum(num),2) from numbers
+    </command>
+  </commands>
+</SRS>
+```
+Sum return: 6.30
+
+
+### Parameter conversion error in math operation with date
+#### Example 1: FAIL
 ```
 <SRS>
   <parameters>
@@ -47,7 +91,7 @@ Youn need to cast GUID to varchar if you want to query command see example
 </SRS>
 ```
 
-### Example 2: OK
+#### Example 2: OK
 ```
 <SRS>
   <parameters>
