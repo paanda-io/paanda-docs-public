@@ -12,8 +12,8 @@ Options section is optional
 - `permission`, optional column level permission
 - `css`, optional CSS class
 - `type`, optional 
-  - `pa_post_single` - post each row as a model
-  - `pa_post` - post each row as a mode
+  - `pa_post_single` - execute POST
+  - `pa_post` - execute POST, for each row
   - `pa_blink` - external link to new window
   - `pa_elink` - external link to same window
   - `pa_download` - external link download
