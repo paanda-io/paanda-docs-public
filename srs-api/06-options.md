@@ -23,6 +23,7 @@ Options section is optional
 
 ``` xml
 <options>
+	<option label="Pokaż wszystkie zamówienia" css="w3-green"  command="orders"  url="/srs/[[app_name]]/301-zamowienia-lista/view?firmid={firmid}&amp;date_to=&amp;date_from=" />
 	<option  css="w3-red" label="Remove Selected" command="documenttypes"  type="pa_post" url="/api/config/delete" />
 	<option label="Create account" css="w3-green"   type="pa_elink" url="/crm/account" />
 	<option label="Create account" css="w3-green"   type="pa_post" url="action:select" />
