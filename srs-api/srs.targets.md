@@ -44,10 +44,10 @@
     - `row[0][3]` - optional, foreground color
   - `svg-table` Returns  image with table
 - Preprocessed
-  - `md` markdown renderer of `app\[renderer].html` template
-  - `pdf` Renders pdf file ,returns application/pdf, renderer of `app\[renderer].html` template
-  - `pdfmd` Renders pdf file ,returns application/pdf, renderer of `app\[renderer].html` template
-  - `htmltemplate`   Renders html file, renderer of `app\[renderer].html` template
+  - `deprecated` `md` markdown renderer of `app\[renderer].html` template
+  - `deprecated` `pdf` Renders pdf file ,returns application/pdf, renderer of `app\[renderer].html` template
+  - `deprecated` `pdfmd` Renders pdf file ,returns application/pdf, renderer of `app\[renderer].html` template
+  - `deprecated` `htmltemplate`   Renders html file, renderer of `app\[renderer].html` template
 
 
 
