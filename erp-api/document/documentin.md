@@ -103,6 +103,17 @@ GET {host}/api/erp/firm/browse/platformaerp/documentin?query=
 GET {host}/api/erp/item/browse/platformaerp/documentin?query=pudelko
 ```
 
+```sql
+--DEPRECATED
+exec [wms].[item_ListForDocument_dictionary] 
+@search=N'3053753438968717823',@username=N'demo',@documentId=N'da1dfb86-426d-eb11-9e6c-e4a471566cb9',@warehouseId=N'aa54e854-0f94-e911-80d8-9c8e994dc647'
+
+--NEW
+exec [erp].[item_list] 
+@dictionary=N'documentin',@username=N'marcin@kotynia.com',@query=N'BLACHA 1.4828 AISI 309',@warehouseId=N'aa54e854-0f94-e911-80d8-9c8e994dc647'
+
+```
+
 **Response**
 
 - data.list - lista firm ( SQL PROCEDURE erp.item_list)
