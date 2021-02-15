@@ -35,23 +35,7 @@ Paanda is built on three layer concept, every operation is available as rest API
 
 ## Extensions
 
-### ERP/MRP API (PL)
 
-- [ERP WSTĘP](/erp-api)  
-- Documents
-  - [REST API Dokument przyjęcie PZ,PZI..](/erp-api/document/documentin.md) 
-  - [REST API Dokument Wydania RW,RWP](/erp-api/document/documentout.md))
-  - [REST API Faktura zakupu, Faktura VAT](/erp-api/document/invoice.md))
-  - [REST API ZAMÓWIENIE](/erp-api/document/order.md)
-  - [REST API UMOWY I PODPISY](/erp-api/document/agreement.md)
-  - Zlecenie Produkcyjne
-  - Zlecenie Serwisowe
-- [ERP Helpers](/erp-api/helpers)  
-  - [Currency Exchange](/erp-api/helpers/currencyexchange.md)
-  - [Geolocation](/erp-api/helpers/geolocation.md)
-  - [Barcode](/erp-api/helpers/barcode.md)
-  - [QRCODE](/erp-api/helpers/qrcode.md)
-  - [VAT](/erp-api/helpers/vat.md)
   
 ## Versions
 
