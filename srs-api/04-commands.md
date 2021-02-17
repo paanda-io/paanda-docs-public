@@ -14,15 +14,16 @@ For Example on `mssql` Connection you can run all Microsoft SQL Server specific 
 - `permission` - **optional**  command available for any role specified, roles separated by `,` 
 - `color` -  **optional** color  example #00008B - Dark blue, select https://htmlcolorcodes.com/color-chart/material-design-color-chart/
 - `type` - **optional**
-  - empty  **(default)**  - render as a table at client
+  - empty  **(default)**  - table view
+  - srs_tiles - tiles view
   - *server* - server side only used to compute properties, not returned
   - hidden - hidden returned
   - header - render  as header at client - only not empty values are rendered
   - footer - render  as footer 
   - single - render as vertical  list at client - only not empty values are rendered
-  - form - render table as form as client
+  - form - render table as form 
   - kpi - render as KPI
-  - srs_tiles - tiles 
+  - any other component name for example "document_print"
 
 ## Hello World example
 
