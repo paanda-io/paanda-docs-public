@@ -34,8 +34,13 @@ Options section is optional
 
 ### type="pa_post"
 
-Type pa_post require `#clipboard` in description 
+Type pa_post require `#clipboard` in description  to show checkbox
 
+```
+<options>
+	<option label="Zapisz zaznaczone priorytety" css="w3-green"   type="pa_post" url="/api/srs/[[app_name]]/506-api-nest-set/run" />
+</options>
+```
 
 ```
 <srs>
@@ -47,6 +52,7 @@ Type pa_post require `#clipboard` in description
 	</command>
 </commands>
 </srs>
+```
 
 
 ## Display resources add
