@@ -18,8 +18,7 @@ Optional XML element with column additional formatting
 
 > Important notice ampersand (&) must be replace with &amp; in attributes
 
-- `desktop` [true], show/hide column
-- `mobile` [true] , visible in mobile
+- `desktop` > `mobile` > `export` [true/false], show/hide column on desktop / mobile / export (excel)
 - `title`, optional title for name
 - `url`, optional URL http://pandaa.io/item/{anycolumnname}/{anycolumnname} , 
   - supported variebles `[[app_name]]` `[[kv.v.*]]`
