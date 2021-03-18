@@ -19,7 +19,7 @@ Options section is optional
   - `pa_download` - external link download
   - `default` - internal link
 
-## Example
+## Options node example
 
 ``` xml
 <options>
@@ -32,7 +32,7 @@ Options section is optional
 ```
 
 
-### type="pa_post"
+### Option type="pa_post"
 
 Type pa_post require `#clipboard` in description  to show checkbox
 
