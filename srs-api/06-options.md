@@ -13,7 +13,7 @@ Options section is optional
 - `css`, optional CSS class
 - `type`, optional 
   - `pa_post_single` - execute POST
-  - `pa_post` - execute POST, for each row
+  - `pa_post` - execute POST, for each row 
   - `pa_blink` - external link to new window
   - `pa_elink` - external link to same window
   - `pa_download` - external link download
@@ -34,15 +34,20 @@ Options section is optional
 
 ### type="pa_post"
 
-Type pa_post require set column in dataset , you can add set column 
+Type pa_post require `#clipboard` in description 
 
-``` sql
-SELECT cast(0 as bit) 'set' , getdate()
+
 ```
+<srs>
+<commands>
+	<command>
+	     <![CDATA[
+	update table set x= @column where y=@column
+	   ]]>
+	</command>
+</commands>
+</srs>
 
-Samples
-
-You can find predefined options for v_srs.js section   v-for="option in api.options"
 
 ## Display resources add
 
