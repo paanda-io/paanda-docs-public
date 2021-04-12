@@ -54,8 +54,8 @@ Built in variables marked in double brackets  `[[kv.v.variable1]]`
 - `[[kv.v.user.username]]` - username
 - `[[kv.v.user.userid]]` user id
 - `[[kv.v.user.roles]]` Roles in brackets [role1] [role2] [role3]
-
-
+- `[[kv.v.user.currency]]` currency
+- `[[kv.v.user.teamid]]` teamid
 
 ### Examples `type="select"` 
 
