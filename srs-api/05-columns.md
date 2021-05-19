@@ -72,6 +72,7 @@ List of custom types from database schema
 - `tformat_k` - Human readable size for large numbers, REturn 10K, 20M
 - `ttag` - build tag list with color based on text
 - `tmarkdown`, renders markdown server side
+- `tjson`, renders xml to json server side
 - `tstring_multi` -- multiline Text with Line breaks similar to HTML `pre` tag
 - `timg` - image token from repository `example: ea4cc594-fd85-ea11-80e1-9c8e994dc647.jpg`  / column.css - style attribute 
   - column.url - url 
